@@ -1,26 +1,35 @@
+
 module.exports = {
   seo: {
-    title: "FastStore Starter",
-    description: "Fast Demo Store",
-    titleTemplate: "%s | FastStore",
-    author: "FastStore",
-  },
-  theme: "custom-theme",
-  platform: "vtex",
+  "title": "Office Depot",
+  "description": "A fast and performant store framework",
+  "titleTemplate": "%s | FastStore",
+  "author": "FastStore"
+},
+
+  // Theming
+  theme: 'custom-theme',
+
+  // Ecommerce Platform
+  platform: 'vtex',
+
+  // Platform specific configs for API
   api: {
-    storeId: "storeframework",
-    workspace: "master",
-    environment: "vtexcommercestable",
-    hideUnavailableItems: false,
+    storeId: "vysk",
+    workspace: 'master',
+    environment: 'vtexcommercestable',
+    hideUnavailableItems: true,
     incrementAddress: false,
   },
+
+  // Default session
   session: {
     currency: {
       code: "USD",
       symbol: "$",
     },
     locale: "en-US",
-    channel: '{"salesChannel":"1","regionId":""}',
+    channel: '{"salesChannel":1,"regionId":""}',
     country: "USA",
     deliveryMode: null,
     addressType: null,
@@ -28,53 +37,63 @@ module.exports = {
     geoCoordinates: null,
     person: null,
   },
+
   cart: {
-    id: "",
+    id: '',
     items: [],
     messages: [],
     shouldSplitItem: true,
   },
-  storeUrl: "https://vtexfaststore.com",
-  secureSubdomain: "https://secure.vtexfaststore.com",
+
+  // Production URLs
+  storeUrl: "https://vysk.vtex.app",
+  secureSubdomain: "https://secure.vtexfaststore.com/",
   checkoutUrl: "https://secure.vtexfaststore.com/checkout",
   loginUrl: "https://secure.vtexfaststore.com/api/io/login",
   accountUrl: "https://secure.vtexfaststore.com/api/io/account",
+
   previewRedirects: {
-    home: "/",
-    plp: "/office",
-    search: "/s?q=headphone",
-    pdp: "/apple-magic-mouse/p",
+    home: '/',
+    plp: "/power%20tools",
+    search: "/s?q=Brand",
+    pdp: "/black-decker-20v-max-cordless-drill-combo-kit-2-tool-bd2kitcddi-black-orange-impact-combo-kit/p",
   },
+
+  // Lighthouse CI
   lighthouse: {
-    server: "http://localhost:3000",
+    server: process.env.BASE_SITE_URL || 'http://localhost:3000',
     pages: {
-      home: "/",
-      pdp: "/4k-philips-monitor-99988213/p",
-      collection: "/office",
+      home: '/',
+      pdp: "/black-decker-20v-max-cordless-drill-combo-kit-2-tool-bd2kitcddi-black-orange-impact-combo-kit/p",
+      collection: "/power%20tools",
     },
   },
+
+  // E2E CI
   cypress: {
     pages: {
-      home: "/",
-      pdp: "/4k-philips-monitor-99988213/p",
-      collection: "/office",
-      collection_2: "/technology",
-      collection_filtered:
-        "/office/?category-1=office&marca=acer&facets=category-1%2Cmarca",
-      search: "/s?q=orange",
+      home: '/',
+      pdp: "/black-decker-20v-max-cordless-drill-combo-kit-2-tool-bd2kitcddi-black-orange-impact-combo-kit/p",
+      collection: "/power%20tools",
+      collection_filtered: "/power%20tools/?category-1=power%20tools&brand=Brand&facets=category-1%2Cbrand%27",
+      search: "/s?q=Brand",
     },
+    browser: 'electron',
   },
+
   analytics: {
-    gtmContainerId: "GTM-PGHZ95N",
+    // https://developers.google.com/tag-platform/tag-manager/web#standard_web_page_installation,
+    gtmContainerId: "",
   },
+
   experimental: {
     nodeVersion: 18,
     cypressVersion: 12,
   },
-  account: "storeframework",
+
   vtexHeadlessCms: {
     webhookUrls: [
-      "https://storeframework.myvtex.com/cms-releases/webhook-releases",
+      "https://vysk.myvtex.com/cms-releases/webhook-releases",
     ],
   },
-};
+}
