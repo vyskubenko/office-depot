@@ -1,10 +1,10 @@
 
 module.exports = {
   seo: {
-  "title": "Office Depot",
+  "title": "Vysk",
   "description": "A fast and performant store framework",
   "titleTemplate": "%s | FastStore",
-  "author": "FastStore"
+  "author": "Lucas Vysk"
 },
 
   // Theming
@@ -16,7 +16,7 @@ module.exports = {
   // Platform specific configs for API
   api: {
     storeId: "vysk",
-    workspace: 'odp',
+    workspace: 'master',
     environment: 'vtexcommercestable',
     hideUnavailableItems: true,
     incrementAddress: false,
@@ -54,9 +54,9 @@ module.exports = {
 
   previewRedirects: {
     home: '/',
-    plp: "/power%20tools",
+    plp: "/apparel",
     search: "/s?q=Brand",
-    pdp: "/black-decker-20v-max-cordless-drill-combo-kit-2-tool-bd2kitcddi-black-orange-impact-combo-kit/p",
+    pdp: "/adidas-womens-microdot-polo-night-indigo/p",
   },
 
   // Lighthouse CI
@@ -64,8 +64,8 @@ module.exports = {
     server: process.env.BASE_SITE_URL || 'http://localhost:3000',
     pages: {
       home: '/',
-      pdp: "/black-decker-20v-max-cordless-drill-combo-kit-2-tool-bd2kitcddi-black-orange-impact-combo-kit/p",
-      collection: "/power%20tools",
+      pdp: "/adidas-womens-microdot-polo-night-indigo/p",
+      collection: "/apparel",
     },
   },
 
@@ -73,9 +73,9 @@ module.exports = {
   cypress: {
     pages: {
       home: '/',
-      pdp: "/black-decker-20v-max-cordless-drill-combo-kit-2-tool-bd2kitcddi-black-orange-impact-combo-kit/p",
-      collection: "/power%20tools",
-      collection_filtered: "/power%20tools/?category-1=power%20tools&brand=Brand&facets=category-1%2Cbrand%27",
+      pdp: "/adidas-womens-microdot-polo-night-indigo/p",
+      collection: "/apparel",
+      collection_filtered: "/apparel?initialMap=c&initialQuery=apparel&map=category-1,clothes-size",
       search: "/s?q=Brand",
     },
     browser: 'electron',
@@ -83,7 +83,7 @@ module.exports = {
 
   analytics: {
     // https://developers.google.com/tag-platform/tag-manager/web#standard_web_page_installation,
-    gtmContainerId: "",
+    gtmContainerId: "GTM-1234567",
   },
 
   experimental: {

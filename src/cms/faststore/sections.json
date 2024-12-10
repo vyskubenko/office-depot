@@ -1,0 +1,195 @@
+[
+  {
+    "name": "CustomHeader",
+    "schema": {
+      "title": "Custom Header",
+      "description": "CustomHeader Wrapper",
+      "type": "object",
+			"required": [
+				"logoLink"
+			],
+      "properties": {
+        "logoLink": {
+          "title": "Link Path",
+          "type": "object",
+          "properties": {
+            "text": {
+              "title": "Text",
+              "type": "string"
+            },
+            "url": {
+              "title": "URL",
+              "type": "string"
+            }
+          }
+        },
+				"logo": {
+          "title": "Logo",
+          "type": "object",
+          "required": ["src"],
+          "properties": {
+            "src": {
+              "title": "Image",
+              "type": "string",
+              "widget": {
+                "ui:widget": "media-gallery"
+              }
+            },
+            "alt": {
+              "title": "Alternative Label",
+              "type": "string"
+            },
+            "link": {
+              "title": "Logo Link",
+              "type": "object",
+              "required": ["url", "title"],
+              "properties": {
+                "url": {
+                  "title": "Link URL",
+                  "type": "string"
+                },
+                "title": {
+                  "title": "Link Title",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "topbar": {
+          "title": "Top bar Item List",
+          "type": "object",
+          "properties": {
+            "left": {
+              "title": "Left Text",
+              "type": "string"
+            },
+            "right": {
+              "title": "Right Text",
+              "type": "string"
+            },
+            "center": {
+              "title": "Top bar Center Item List",
+              "type": "array",
+              "items": {
+                "title": "item center top bar",
+                "type": "object",
+                "properties": {
+                  "infoText": {
+                    "title": "Text",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "region": {
+          "title": "Regionalizaton",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "title": "Use Regionalization?",
+              "default": true
+            }
+          }
+        },
+        "navButtons": {
+          "title": "navButtons Item List",
+          "type": "array",
+          "items": {
+            "title": "navButtons Item",
+            "type": "object",
+            "properties": {
+              "title": {
+                "title": "Text",
+                "type": "string"
+              },
+              "icon": {
+                "title": "icon",
+                "type": "string",
+                "widget": { "ui:widget": "image-uploader" }
+              },
+              "href": {
+                "title": "href",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "menu": {
+          "title": "Main Menu Item List",
+          "type": "array",
+          "items": {
+            "title": "main menu first level",
+            "type": "object",
+            "properties": {
+              "title": {
+                "title": "Text",
+                "type": "string"
+              },
+              "href": {
+                "title": "href",
+                "type": "string"
+              },
+              "submenu": {
+                "title": "2nd Level Main Menu Item List",
+                "type": "array",
+                "items": {
+                  "title": "Items in second level menu",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "title": "Text",
+                      "type": "string"
+                    },
+                    "href": {
+                      "title": "href",
+                      "type": "string"
+                    },
+                    "headTitle": {
+                      "title": "Is head title?",
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "submenu": {
+                      "title": "3nd Level Main Menu Item List",
+                      "type": "array",
+                      "items": {
+                        "title": "Items in third level menu",
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "title": "Text",
+                            "type": "string"
+                          },
+                          "href": {
+                            "title": "href",
+                            "type": "string"
+                          },
+                          "image": {
+                            "title": "image",
+                            "type": "string",
+                            "widget": { "ui:widget": "image-uploader" }
+                          },
+                          "headTitle": {
+                            "title": "Is head title?",
+                            "type": "boolean",
+                            "default": false
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+
+
