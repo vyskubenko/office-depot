@@ -3,7 +3,7 @@ import { NavbarLinksListItem, Link, Button } from "@faststore/ui";
 
 import styles from "./CustomHeader.module.scss";
 
-import { CloseIcon, MenuArrow, ArrowRightPath } from "../../assets/Icons";
+import { CloseIcon, MenuArrow,ArrowIcon, ArrowRightPath } from "../../assets/Icons";
 
 export type MenuProps = {
   menu: any;
@@ -18,6 +18,9 @@ const MenuItem = ({ item, level, isOpen, onClick }: any) => {
   };
 
   const hasChildren = item.submenu && item.submenu.length > 0;
+
+
+  console.log(level)
 
 
   return (
@@ -36,13 +39,10 @@ const MenuItem = ({ item, level, isOpen, onClick }: any) => {
         variant={hasChildren ? "display" : "default"}
         as={hasChildren ? "span" : "a"}
       >
-        {item.title}
+        {item.title} 
 
-        {item?.image ? <img src={item.image} /> : (
-          
-          item.headTitle ? <ArrowRightPath /> : <MenuArrow />
+        {level == 1 ? <ArrowIcon /> : <ArrowRightPath />}
         
-        )}
       </Link>
 
       {hasChildren && isOpen && (

@@ -1,0 +1,51 @@
+
+.RegionHeaderBar {
+  margin: 0 auto var(--fs-spacing-3) auto;
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #bec0c3;
+
+
+}
+
+.RegionHeaderBar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 0;
+  align-items: center;
+}
+
+.RegionHeaderBar__info {
+
+  ul {
+    li {
+      border-right: 1px solid #000;
+      font-size: var(--fs-text-size-0);
+    }
+  }  
+
+  
+}
+
+
+.RegionHeaderBar__region {
+
+ 
+
+  [data-fs-button-wrapper] {
+    > span {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  [data-fs-region-bar-cta] {
+    order: 0;
+  }
+
+  [data-fs-region-bar-postal-code] {
+    order: 1;
+    color:#1e5a99;
+    margin-left: 5px;
+  }
+}

@@ -9,9 +9,14 @@
     // Colors (Branding Core)
     // --------------------------------------------------------
     --fs-color-main-0: #f1f2f3;
+
+
+    --fs-color-odp-red: #B30000;
     // --------------------------------------------------------
     // Typography (Branding Core)
     // --------------------------------------------------------
+
+    --fs-text-face-body: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
 
     // --------------------------------------------------------
     // Spacing (UI Essentials)
@@ -20,6 +25,7 @@
     // --------------------------------------------------------
     // Grid & Layout (UI Essentials)
     // --------------------------------------------------------
+    --fs-grid-max-width: 87%;
 
     // --------------------------------------------------------
     // Interactive Controls (UI Essentials)
@@ -34,4 +40,5 @@
     // --------------------------------------------------------
     // Add here the customizations for FastStore UI components.
   }
+  
 }

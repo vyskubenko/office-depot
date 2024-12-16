@@ -9,6 +9,52 @@
 				"logoLink"
 			],
       "properties": {
+        "topbar": {
+          "title": "Top bar Item List",
+          "type": "array",
+          "items": {
+            "title": "Top Item",
+            "type": "object",
+            "properties": {
+              "link": {
+                "title": "link",
+                "type": "string"
+              },
+              "ico": {
+                "title": "ico",
+                "type": "string",
+                "widget": { "ui:widget": "media-gallery" }
+              },
+              "infoText": {
+                "title": "text",
+                "type": "array",
+                "items": {
+                  "title": "text content",
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "title": "link",
+                      "type": "string"
+                    },
+                    "color": {
+                      "title": "Text Color",
+                      "type": "string",
+                      "enumNames": [
+                        "Normal",
+                        "Highlight"
+                      ],
+                      "enum": [
+                        "normal",
+                        "highlight"
+                      ],
+                      "default": "normal"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "logoLink": {
           "title": "Link Path",
           "type": "object",
@@ -51,34 +97,6 @@
                 "title": {
                   "title": "Link Title",
                   "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "topbar": {
-          "title": "Top bar Item List",
-          "type": "object",
-          "properties": {
-            "left": {
-              "title": "Left Text",
-              "type": "string"
-            },
-            "right": {
-              "title": "Right Text",
-              "type": "string"
-            },
-            "center": {
-              "title": "Top bar Center Item List",
-              "type": "array",
-              "items": {
-                "title": "item center top bar",
-                "type": "object",
-                "properties": {
-                  "infoText": {
-                    "title": "Text",
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -189,7 +207,104 @@
         }
       }
     }
+  },
+  {
+    "name": "BannerGrid",
+    "schema": {
+      "title": "BannerGrid for Images",
+      "description": "BannerGrid for images",
+      "type": "object",
+      "properties": {
+        "row": {
+          "title": "Banner List",
+          "type": "array",
+          "items": {
+            "title": "Banner row",
+            "type": "object",
+            "properties": {
+              "column": {
+                "title": "banner column",
+                "type": "array",
+                "items": {
+                  "title": "Banner",
+                  "type": "object",
+                  "properties": {
+                    "image": {
+                      "title": "Image",
+                      "type": "string",
+                      "widget": { "ui:widget": "media-gallery" }
+                    },
+                    "name": {
+                      "title": "Name",
+                      "type": "string"
+                    },
+                    "url": {
+                      "title": "Link",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "RegionHeaderBar",
+    "schema": {
+      "title": "RegionBar for Header",
+      "description": "RegionBar for Header",
+      "type": "object",
+      "properties": {
+        "topbar": {
+          "title": "Top bar Item List",
+          "type": "array",
+          "items": {
+            "title": "Top Item",
+            "type": "object",
+            "properties": {
+              "link": {
+                "title": "link",
+                "type": "string"
+              },
+              "ico": {
+                "title": "ico",
+                "type": "string",
+                "widget": { "ui:widget": "media-gallery" }
+              },
+              "infoText": {
+                "title": "text",
+                "type": "array",
+                "items": {
+                  "title": "text content",
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "title": "link",
+                      "type": "string"
+                    },
+                    "color": {
+                      "title": "Text Color",
+                      "type": "string",
+                      "enumNames": [
+                        "Normal",
+                        "Highlight"
+                      ],
+                      "enum": [
+                        "normal",
+                        "highlight"
+                      ],
+                      "default": "normal"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 ]
-
-

@@ -17,15 +17,16 @@ interface subMenuLinks3 {
     href: string;
     submenu: subMenuLinks[];
   }
-  
-  interface topBarInfo {
-    infoText: string;
+
+  interface infoTextArray {
+    text: string;
+    color: string;
   }
   
-  interface topBarInfoWrap {
-    left: string;
-    right: string;
-    center: topBarInfo[];
+  interface topBarInfo {
+    infoText: infoTextArray[];
+    link: string;
+    ico: string;
   }
   
   interface navButtons {
@@ -49,7 +50,7 @@ interface subMenuLinks3 {
         title: string;
       };
     };
-    topbar: topBarInfoWrap;
+    topbar: topBarInfo[];
     region: {
       enabled:boolean;
     };

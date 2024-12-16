@@ -22,10 +22,12 @@ const Menu: FC<MenuProps> = ({ menu: mainMenu  }) => {
     setOpenIndex(index === openIndex ? null : index);
   };
 
+  if(!mainMenu) return
+
   return (
     <NavbarLinks className={styles.customHeader__navLinks}>
       <NavbarLinksList className={styles.customHeader__menu}>
-        {mainMenu.map((item: any, idx: React.Key | null | undefined) => (
+        {mainMenu.length && mainMenu.map((item: any, idx: React.Key | null | undefined) => (
           <MenuItem
             key={idx}
             item={item}
