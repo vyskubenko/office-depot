@@ -1,11 +1,10 @@
 .customHeader {
-  background-color: #FFF;
+
+  background: var(--fs-color-main-1) url(../../assets/textureODP.webp) repeat;
   
   @import '@faststore/ui/src/components/molecules/Dropdown/styles.scss';
 
-  [data-fs-navbar-header] {
-    background-color: #FFF;
-  }
+  padding: 10px;
 }
 
 .customHeader__wrapper {
@@ -28,10 +27,7 @@
 }
 
 .customHeader__logo {
-  width: 117px !important;
-  min-width: 60px !important;
   padding: 0 !important;
-  background-color: var(--fs-color-odp-red);
   display: flex;
   align-items: center;
 }
@@ -172,10 +168,6 @@
 
       img {
         margin-right: 10px;
-      }
-
-      [data-variant="highlight"] {
-        color:#B30000;
       }
 
       span + span {

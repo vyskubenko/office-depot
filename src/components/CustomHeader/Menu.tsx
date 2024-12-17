@@ -16,12 +16,6 @@ export type MenuProps = {
 
 const Menu: FC<MenuProps> = ({ menu: mainMenu  }) => {
 
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const handleItemClick = (index: number) => {
-    setOpenIndex(index === openIndex ? null : index);
-  };
-
   if(!mainMenu) return
 
   return (
@@ -32,8 +26,6 @@ const Menu: FC<MenuProps> = ({ menu: mainMenu  }) => {
             key={idx}
             item={item}
             level={1}
-            isOpen={openIndex === idx}
-            onClick={() => handleItemClick(idx as any)}
           />
         ))}
       </NavbarLinksList>

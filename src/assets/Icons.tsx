@@ -32,8 +32,7 @@ export const PhoneIcon = (props:any)=>{
 
 export const BagIcon = (props:any)=>{
   return (
-<svg focusable="false" viewBox="0 0 32 32" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true" {...props}><title>Icon/Others/Cart</title><path d="M9.938 24.747a2.964 2.964 0 0 0-1.372 2.496c0 1.649 1.356 2.977 3.019 2.977 1.662 0 3.018-1.328 3.018-2.977 0-.343-.058-.672-.166-.978h7.922a2.938 2.938 0 0 0-.167.978c0 1.649 1.356 2.977 3.019 2.977s3.019-1.328 3.019-2.977c0-1.65-1.356-2.978-3.019-2.978H11.88l-.447-1.978h15.762a1 1 0 0 0 .952-.693l3.817-11.866a1 1 0 0 0-.952-1.306H8.306L6.921 2.28a1 1 0 0 0-.976-.78H1.25a1 1 0 1 0 0 2h3.897l4.792 21.247zm1.044-4.46l-2.225-9.865H29.64l-3.174 9.865H10.982zm13.21 6.956c0-.536.452-.978 1.019-.978s1.019.442 1.019.978c0 .535-.452.977-1.019.977s-1.019-.442-1.019-.977zm-13.626 0c0-.536.452-.978 1.019-.978s1.018.442 1.018.978c0 .535-.451.977-1.018.977s-1.02-.442-1.02-.977z" fill="#231F20" fill-rule="nonzero"></path></svg>
-
+    <svg xmlns="http://www.w3.org/2000/svg" width="60.5" height="52" viewBox="0 0 60.5 52" role="presentation" {...props}><circle fill="none" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12.125" cy="46.875" r="4"></circle><circle fill="none" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="39.125" cy="46.875" r="4"></circle><path fill="none" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M59.125.875h-8.826l-10.174 42h-28"></path><path fill="none" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M41.125 38.875H8.69l-7.565-24h45.782"></path></svg>
   )
 }
 
@@ -80,9 +79,6 @@ export const ArrowRightPath = (props:any)=>{
 
 export const HelpIcon = (props:any)=>{
   return (
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM10.9375 14.6875C10.9375 15.2051 10.5168 15.625 10 15.625C9.48122 15.625 9.0625 15.206 9.0625 14.6875C9.0625 14.169 9.48122 13.75 10 13.75C10.5168 13.75 10.9375 14.1699 10.9375 14.6875ZM18.75 10C18.75 14.8325 14.8325 18.75 10 18.75C5.16751 18.75 1.25 14.8325 1.25 10C1.25 5.16751 5.16751 1.25 10 1.25C14.8325 1.25 18.75 5.16751 18.75 10Z" fill="#232B33"/>
-<path d="M13.4253 7.4375C13.4253 8.96649 12.3982 10.4707 10.6289 10.5307V11.6711C10.6289 11.9133 10.4742 12.3135 10 12.3135C9.52577 12.3135 9.38482 11.9133 9.38482 11.6711V10.1915C9.38482 9.69165 9.60504 9.29578 10.1584 9.29578C11.2449 9.29578 12.0585 8.52642 12.0585 7.4375C12.0585 6.34858 11.2067 5.5625 10.1569 5.5625C9.10716 5.5625 8.47465 6.44188 8.37882 6.93662C8.34125 7.13063 8.20248 7.61446 7.74382 7.61446C7.28516 7.61446 7.125 7.22922 7.125 6.93662C7.125 5.80262 8.12798 4.375 10.1311 4.375C12.1527 4.375 13.4253 5.78723 13.4253 7.4375Z" fill="#232B33"/>
-</svg>
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="presentation"  {...props}><path d="M15.777 27.004L11 31.685c-.622.655-1.725.215-1.725-.689l.035-3.992H1a1 1 0 01-1-1V4.016a1 1 0 011-1h30a1 1 0 011 1v21.988a1 1 0 01-1 1H15.777zm14.223-2V5.016H2v19.988h8.31a1 1 0 011 1v2.516l3.313-3.205a1 1 0 01.725-.311H30zM11 15c0 .83-.67 1.5-1.5 1.5S8 15.83 8 15s.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm13 0c0 .83-.67 1.5-1.5 1.5S21 15.83 21 15s.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm-6.5 0a1.5 1.5 0 11-1.5-1.5c.83 0 1.5.67 1.5 1.5z" fill="#fff"></path></svg>
   )
 }

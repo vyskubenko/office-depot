@@ -9,23 +9,13 @@ export type MenuProps = {
   menu: any;
 };
 
-const MenuItem = ({ item, level, isOpen, onClick }: any) => {
+const MenuItem = ({ item, level, onClick }: any) => {
   
-  const [subMenuOpenIndex, setSubMenuOpenIndex] = useState<number | null>(null);
-
-  const handleSubItemClick = (index: number) => {
-    setSubMenuOpenIndex(index === subMenuOpenIndex ? null : index);
-  };
-
-  const hasChildren = item.submenu && item.submenu.length > 0;
-
-
-  console.log(level)
-
+  const hasChildren = (item.submenu && item.submenu.length > 0) || ( item.submenuThirdLevel && item.submenuThirdLevel.length > 0);
 
   return (
     <NavbarLinksListItem
-      className={`${styles.subMenu__item} ${item.headTitle ? 'subMenu__item__headTitle' : ''} ${hasChildren ? "has-children" : ""} ${isOpen ? styles.subMenu__itemOpen : ""} `}
+      className={`${styles.subMenu__item} ${item.headTitle ? 'subMenu__item__headTitle' : ''} ${hasChildren ? "has-children" : ""} `}
       data-level={level}
       data-headtitle={item.headTitle}
     >
@@ -45,7 +35,7 @@ const MenuItem = ({ item, level, isOpen, onClick }: any) => {
         
       </Link>
 
-      {hasChildren && isOpen && (
+      {hasChildren && (
         <ul
           data-fs-dropdown-menu
           data-testid="data-fs-dropdown-menu"
@@ -58,15 +48,27 @@ const MenuItem = ({ item, level, isOpen, onClick }: any) => {
             <Button className={styles.subMenu__item__head__close} variant="tertiary" icon={<CloseIcon />} onClick={onClick} size="small" />
           </li>
 
-          {item.submenu.map((subItem: any, index: any) => (
-            <MenuItem
-              item={subItem}
-              key={index}
-              level={level + 1}
-              isOpen={subMenuOpenIndex === index}
-              onClick={() => handleSubItemClick(index)}
-            />
-          ))}
+          {item.submenu && item.submenu.length ? (
+            item.submenu.map((subItem: any, index: any) => (
+              <MenuItem
+                item={subItem}
+                key={index}
+                level={level + 1}
+              />
+            ))
+          ) : (
+            item.submenuThirdLevel.map((subItemCol: any, index: any) => (
+              <div>
+                {subItemCol.map((subItem: any, index: any) => (
+                  <MenuItem
+                    item={subItem}
+                    key={1}
+                    level={level + 1}
+                  />
+                ))}
+              </div>
+            ))
+          )}
         </ul>
       )}
     </NavbarLinksListItem>

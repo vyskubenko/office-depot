@@ -48,14 +48,12 @@ export default function CustomHeader(props: CustomHeaderProps)  {
 
   const { topbar, navButtons, region, menu: mainMenu } = props;
 
+
   return (
     <Navbar
       scrollDirection={scrollDirection}
       className={`${styles.section} ${styles.customHeader} section-navbar`}
     >
-      <div className={styles.topBar}>
-          <TopBarItem topbar={topbar} ></TopBarItem>
-      </div>
 
       <NavbarHeader>
           <div className={styles.customHeader__wrapper}>
@@ -71,8 +69,8 @@ export default function CustomHeader(props: CustomHeaderProps)  {
                   data-fs-image
                   style={{ width: "100%", height: "auto" }}
                   src={props.logo.src}
-                  width={117}
-                  height={60}
+                  width={141}
+                  height={50}
                   alt={props.logo.link.title}
                   priority={true}
                   loading="eager"
@@ -87,7 +85,7 @@ export default function CustomHeader(props: CustomHeaderProps)  {
 
               <NavbarButtons className={styles.navbarButtons} searchExpanded={false}>
 
-                {navButtons.length > 0 && (
+                {navButtons && navButtons.length > 0 && (
                   <>
                     {navButtons.map((item, index) => (
                       <Link

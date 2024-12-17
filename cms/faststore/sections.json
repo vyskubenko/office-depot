@@ -9,52 +9,6 @@
 				"logoLink"
 			],
       "properties": {
-        "topbar": {
-          "title": "Top bar Item List",
-          "type": "array",
-          "items": {
-            "title": "Top Item",
-            "type": "object",
-            "properties": {
-              "link": {
-                "title": "link",
-                "type": "string"
-              },
-              "ico": {
-                "title": "ico",
-                "type": "string",
-                "widget": { "ui:widget": "media-gallery" }
-              },
-              "infoText": {
-                "title": "text",
-                "type": "array",
-                "items": {
-                  "title": "text content",
-                  "type": "object",
-                  "properties": {
-                    "text": {
-                      "title": "link",
-                      "type": "string"
-                    },
-                    "color": {
-                      "title": "Text Color",
-                      "type": "string",
-                      "enumNames": [
-                        "Normal",
-                        "Highlight"
-                      ],
-                      "enum": [
-                        "normal",
-                        "highlight"
-                      ],
-                      "default": "normal"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "logoLink": {
           "title": "Link Path",
           "type": "object",
@@ -166,35 +120,29 @@
                       "title": "href",
                       "type": "string"
                     },
-                    "headTitle": {
-                      "title": "Is head title?",
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "submenu": {
+                    "submenuThirdLevel": {
                       "title": "3nd Level Main Menu Item List",
                       "type": "array",
                       "items": {
-                        "title": "Items in third level menu",
-                        "type": "object",
-                        "properties": {
-                          "title": {
-                            "title": "Text",
-                            "type": "string"
-                          },
-                          "href": {
-                            "title": "href",
-                            "type": "string"
-                          },
-                          "image": {
-                            "title": "image",
-                            "type": "string",
-                            "widget": { "ui:widget": "image-uploader" }
-                          },
-                          "headTitle": {
-                            "title": "Is head title?",
-                            "type": "boolean",
-                            "default": false
+                        "title": "col",
+                        "type": "array",
+                        "items": {
+                          "title": "Items in third level menu",
+                          "type": "object",
+                          "properties": {
+                            "title": {
+                              "title": "Text",
+                              "type": "string"
+                            },
+                            "href": {
+                              "title": "href",
+                              "type": "string"
+                            },
+                            "headTitle": {
+                              "title": "Is head title?",
+                              "type": "boolean",
+                              "default": false
+                            }
                           }
                         }
                       }
