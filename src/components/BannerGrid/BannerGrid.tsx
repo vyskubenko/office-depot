@@ -12,6 +12,7 @@ interface banner {
   image: string;
   name: string;
   url: string;
+  width: string;
 }
 
 interface column {
@@ -24,9 +25,7 @@ export interface bannerArray {
 }
 
 export default function BannerGrid(props: bannerArray) {
-
-  console.log(props)
-
+  
   const BannerGrid = props
   
   return (
@@ -34,7 +33,7 @@ export default function BannerGrid(props: bannerArray) {
       {BannerGrid.row?.length && BannerGrid.row.map((Row, bgix) => (
         <div className={styles.bannerGrid__row} key={bgix}>
            {Row.column?.length && Row.column.map((banner, bix) => (
-              <div className={styles.bannerGrid__col} key={bix}>
+              <div className={styles.bannerGrid__col} key={bix}  style={{ width:`${banner.width}%` }}>
                 <Link href={banner.url}>
                   <picture>
                     <Image

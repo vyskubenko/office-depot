@@ -21,7 +21,6 @@ const MenuItem = ({ item, level, onClick }: any) => {
     >
       <Link
         data-fs-button-dropdown-link-highlight={item.headTitle}
-        size={item.headTitle ? "small" : "regular"}
         href={item.href}
         data-testid="data-fs-button-dropdown-link"
         className={styles.navLink}
@@ -31,22 +30,15 @@ const MenuItem = ({ item, level, onClick }: any) => {
       >
         {item.title} 
 
-        {level == 1 ? <ArrowIcon /> : <ArrowRightPath />}
+        {level <= 2 ? <ArrowRightPath /> : ``}
         
       </Link>
 
       {hasChildren && (
         <ul
-          data-fs-dropdown-menu
-          data-testid="data-fs-dropdown-menu"
           className={styles.subMenu}
           data-level={level}
         >
-
-          <li className={styles.subMenu__item__head}>
-            <h4>{item.title}</h4>
-            <Button className={styles.subMenu__item__head__close} variant="tertiary" icon={<CloseIcon />} onClick={onClick} size="small" />
-          </li>
 
           {item.submenu && item.submenu.length ? (
             item.submenu.map((subItem: any, index: any) => (
@@ -58,11 +50,14 @@ const MenuItem = ({ item, level, onClick }: any) => {
             ))
           ) : (
             item.submenuThirdLevel.map((subItemCol: any, index: any) => (
-              <div>
+              <div
+                className={styles.subMenu__col}
+                key={index}
+              >
                 {subItemCol.map((subItem: any, index: any) => (
                   <MenuItem
                     item={subItem}
-                    key={1}
+                    key={index}
                     level={level + 1}
                   />
                 ))}

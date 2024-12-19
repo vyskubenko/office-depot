@@ -100,17 +100,15 @@ export default function CustomHeader(props: CustomHeaderProps)  {
                   </>
                 )}
 
-                {/* {region?.enabled && (
+                {region?.enabled && (
                   <RegionBar
                     label="Set your location"
-                    icon={
-                      <StoreLocatorIconBlue data-fs-icon />
-                    }
+                    editLabel="Delivery: "
                     postalCode={postalCode}
                     className={styles.customHeader__regionBar}
                     onButtonClick={() => openModal()}
                   />
-                )} */}
+                )}
                 
                 <Link
                   href="/contact-us"
@@ -122,15 +120,7 @@ export default function CustomHeader(props: CustomHeaderProps)  {
                   </span>
                 </Link>
 
-                <Link
-                  href={person?.id ? `/account` : `/login`}
-                  className={styles.navButtons__item}
-                >
-                  <MyAccountIcon className={`${styles.navButtons__item__icon}`} data-icon="account" />
-                  <span className={styles.navButtons__item__text}>
-                    Account
-                  </span>
-                </Link>
+                
                 <IconButton
                   data-fs-cart-toggle
                   aria-label="cart"
@@ -153,6 +143,18 @@ export default function CustomHeader(props: CustomHeaderProps)  {
                     {cart.totalItems}
                   </span>
                 </IconButton>
+
+                <Link
+                  href={person?.id ? `/account` : `/login`}
+                  className={styles.navButtons__item}
+                >
+                  <MyAccountIcon className={`${styles.navButtons__item__icon}`} data-icon="account" />
+                  <span className={styles.navButtons__item__text}>
+                    Account
+                  </span>
+                </Link>
+
+                
                 <IconButton
                   data-fs-navbar-button-menu
                   aria-label="Open Menu"

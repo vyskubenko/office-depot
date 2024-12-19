@@ -1,0 +1,88 @@
+.infoCardSlider {
+  margin-top: var(--fs-spacing-12);
+  margin-bottom: var(--fs-spacing-10);
+
+  @import "@faststore/ui/src/components/atoms/Button/styles.scss";
+  @import "@faststore/ui/src/components/molecules/Carousel/styles.scss";
+
+  [data-fs-carousel] {
+		--fs-carousel-item-margin-right: 10px;
+
+    width: 100%;
+
+    [data-fs-carousel-track] {
+      padding: 0;
+    }
+  }
+
+  [data-fs-carousel-item] {
+    text-align: left;
+		border:1px solid transparent;
+		transition: all ease 0.3s;
+		padding: 5px;
+
+    @include media("<notebook") {
+      width: calc(50% - 5px);
+    }
+  }
+
+  [data-fs-carousel-controls] {
+    width: calc(100% + 37px) !important;
+		margin-bottom: -24px !important;
+
+    @include media("<notebook") {
+      opacity: 1 !important;
+    }
+  }
+
+  [data-fs-carousel-banner] {
+    [data-fs-link] {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    [data-fs-button] {
+      --fs-button-border-width: var(--fs-border-width);
+      --fs-button-text-weight: var(--fs-text-weight-regular);
+      margin-top: auto;
+    }
+  }
+
+	&__title {
+		color: var(--fs-color-main-1);
+		font-family: var(--fs-text-face-title);
+		font-size: var(--fs-text-size-7);
+		font-weight: 700;
+		text-align: center;
+
+
+		
+		margin: 0 0 var(--fs-spacing-5) 0;
+
+	}
+}
+
+.infoCardSlider__Carousel {
+  width: 100%;
+}
+
+.infoCardSlider__item {
+  position: relative;
+  text-align: center;
+}
+
+.infoCardSlider__content {
+  clear: both;
+
+  &__title {
+    color: var(--fs-color-main-1);
+		font-size: var(--fs-text-size-4);
+		font-weight: bold;
+		text-transform: none;
+		padding: 10px 0;
+    margin-bottom: var(--fs-spacing-3);
+
+  }
+}

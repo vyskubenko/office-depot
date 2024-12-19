@@ -5,14 +5,12 @@
 
 .bannerGrid__row {
   display: flex;
-  margin: 0 calc(var(--fs-spacing-1) * -1);
+  gap:var(--fs-spacing-3)
 }
 
 .bannerGrid__col {
   width: 100%;
-  margin: var(--fs-spacing-1);
-
   img {
-    border-radius: 15px;
+    border-radius: 30px;
   }
 }

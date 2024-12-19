@@ -189,6 +189,27 @@
                     "url": {
                       "title": "Link",
                       "type": "string"
+                    },
+                    "width": {
+                      "title": "Size (width in %)",
+                      "type": "string",
+                      "enumNames": [
+                        "25%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "75%",
+                        "100%"
+                      ],
+                      "enum": [
+                        "25",
+                        "40",
+                        "50",
+                        "60",
+                        "75",
+                        "100"
+                      ],
+                      "default": "100"
                     }
                   }
                 }
@@ -246,6 +267,170 @@
                       ],
                       "default": "normal"
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "ImageRow",
+    "schema": {
+      "title": "Row for Images",
+      "description": "Usually used to display brands and its links",
+      "type": "object",
+      "required": [],
+      "properties": {
+				"title": {
+          "title": "Headtitle",
+          "type": "string"
+        },
+        "titleEnabled": {
+          "type": "boolean",
+          "title": "Display Title?",
+          "default": true
+        },
+        "itemsPerPage": {
+          "title": "Items per page in the Carousel",
+          "type": "number",
+          "default": 4
+        },
+        "imageHeight": {
+          "title": "Images Height",
+          "description": "If you set an value, all images inside the carousel will have the same value. Otherwise it follows its original proportinal size",
+          "type": "number"
+        },
+        "list": {
+          "title": "Item List",
+          "type": "array",
+          "items": {
+            "title": "Image",
+            "type": "object",
+            "properties": {
+              "image": {
+                "title": "Image",
+                "type": "string",
+                "widget": { "ui:widget": "media-gallery" }
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "url": {
+                "title": "Link",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "InfoCardSlider",
+    "schema": {
+      "title": "Info Card Slider",
+      "description": "Is a list of infocardds in a carousel mode",
+      "type": "object",
+      "required": [],
+      "properties": {
+				"title": {
+          "title": "Headtitle",
+          "type": "string"
+        },
+        "titleEnabled": {
+          "type": "boolean",
+          "title": "Display Title?",
+          "default": true
+        },
+        "itemsPerPage": {
+          "title": "Items per page",
+          "type": "number",
+          "default": 4
+        },
+        "infiniteMode": {
+          "title": "Infinite mode",
+          "type": "boolean",
+          "default": true
+        },
+        "list": {
+          "title": "Item List",
+          "type": "array",
+          "items": {
+            "title": "Banner",
+            "type": "object",
+            "properties": {
+              "imageDesktop": {
+                "title": "Image Desktop",
+                "type": "string",
+                "widget": { "ui:widget": "media-gallery" }
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "url": {
+                "title": "Link",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+	{
+    "name": "TabContent",
+    "schema": {
+      "title": "Tab Content with Banner",
+      "description": "Tab Content contains a banner",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "headTitle": {
+          "title": "Headtitle",
+          "type": "string"
+        },
+        "tabs": {
+          "title": "Tabs",
+          "type": "array",
+          "items": {
+            "title": "Tab",
+            "type": "object",
+            "properties": {
+              "title": {
+                "title": "Title",
+                "type": "string"
+              },
+              "ico": {
+                "title": "Tab Ico",
+                "type": "string",
+                "widget": { "ui:widget": "media-gallery" }
+              },
+              "content": {
+                "title": "Content (txt)",
+                "type": "string"
+              },
+
+              "linkText": {
+                "title": "linkText",
+                "type": "string"
+              },
+              "href": {
+                "title": "href",
+                "type": "string"
+              },
+              "banner": {
+                "title": "banner",
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "title": "Image",
+                    "type": "string",
+                    "widget": { "ui:widget": "media-gallery" }
                   }
                 }
               }
