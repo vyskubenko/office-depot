@@ -1,16 +1,18 @@
 
 .bannerGrid {
   margin:  var(--fs-spacing-3) auto;
-}
 
-.bannerGrid__row {
-  display: flex;
-  gap:var(--fs-spacing-3)
-}
 
-.bannerGrid__col {
-  width: 100%;
-  img {
-    border-radius: 30px;
+  &__row {
+    display: flex;
+    gap:var(--fs-spacing-3)
+  }
+  
+  &__col {
+    width: 100%;
+    img {
+      border-radius: 30px;
+    }
   }
 }
+
