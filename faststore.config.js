@@ -15,8 +15,8 @@ module.exports = {
 
   // Platform specific configs for API
   api: {
-    storeId: "vysk",
-    workspace: 'master',
+    storeId: "uscertification06odp",
+    workspace: 'faststore',
     environment: 'vtexcommercestable',
     hideUnavailableItems: true,
     incrementAddress: false,
@@ -46,7 +46,7 @@ module.exports = {
   },
 
   // Production URLs
-  storeUrl: "https://vysk.vtex.app",
+  storeUrl: "https://uscertification06odp.vtex.app",
   secureSubdomain: "https://secure.vtexfaststore.com/",
   checkoutUrl: "https://secure.vtexfaststore.com/checkout",
   loginUrl: "https://secure.vtexfaststore.com/api/io/login",
