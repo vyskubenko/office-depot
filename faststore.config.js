@@ -93,7 +93,7 @@ module.exports = {
 
   vtexHeadlessCms: {
     webhookUrls: [
-      "https://odp2--vysk.myvtex.com/cms-releases/webhook-releases",
+      "https://faststore--uscertification06odp.myvtex.com/cms-releases/webhook-releases",
     ],
   },
 }
