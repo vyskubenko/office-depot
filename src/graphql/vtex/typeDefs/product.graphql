@@ -1,0 +1,25 @@
+type Installments {
+  installmentPaymentSystemName: String!
+  installmentValue: Float!
+  installmentInterest: Float!
+  installmentNumber: Float!
+}
+
+type Properties {
+  name: String
+  originalName: String
+  values: [properValues]
+}
+
+type properValues {
+  val: String
+}
+
+
+extend type StoreProduct {
+  """
+  Retrieve available installment data extending StoreProduct
+  """
+  availableInstallments: [Installments!]!
+  properties: [Properties!]!
+}

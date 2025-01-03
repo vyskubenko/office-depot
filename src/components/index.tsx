@@ -5,6 +5,7 @@ import RegionHeaderBar from './RegionHeaderBar/RegionHeaderBar'
 import ImageRow from './ImageRow/imageRow'
 import InfoCardSlider from './InfoCardSlider/InfoCardSlider'
 import TabContent from './TabContent/TabContent'
+import ProductSpecifications from './ProductSpecifications/ProductSpecifications'
 
 export default {
   CustomHeader,
@@ -12,5 +13,6 @@ export default {
   RegionHeaderBar,
   ImageRow,
   InfoCardSlider,
-  TabContent
+  TabContent,
+  ProductSpecifications
 }

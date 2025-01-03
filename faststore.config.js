@@ -56,7 +56,7 @@ module.exports = {
     home: '/',
     plp: "/apparel",
     search: "/s?q=Brand",
-    pdp: "/adidas-womens-microdot-polo-night-indigo/p",
+    pdp: "/avery®-file-folder-labels-on-4-x-6-sheet-with-easy-peel--5204--rectangle--2-3-x-3-7-16--white-with-purple-color-bar--pack-of-252-labels-112375/p",
   },
 
   // Lighthouse CI
@@ -64,7 +64,7 @@ module.exports = {
     server: process.env.BASE_SITE_URL || 'http://localhost:3000',
     pages: {
       home: '/',
-      pdp: "/adidas-womens-microdot-polo-night-indigo/p",
+      pdp: "/avery®-file-folder-labels-on-4-x-6-sheet-with-easy-peel--5204--rectangle--2-3-x-3-7-16--white-with-purple-color-bar--pack-of-252-labels-112375/p",
       collection: "/apparel",
     },
   },
@@ -73,7 +73,7 @@ module.exports = {
   cypress: {
     pages: {
       home: '/',
-      pdp: "/adidas-womens-microdot-polo-night-indigo/p",
+      pdp: "/avery®-file-folder-labels-on-4-x-6-sheet-with-easy-peel--5204--rectangle--2-3-x-3-7-16--white-with-purple-color-bar--pack-of-252-labels-112375/p",
       collection: "/apparel",
       collection_filtered: "/apparel?initialMap=c&initialQuery=apparel&map=category-1,clothes-size",
       search: "/s?q=Brand",

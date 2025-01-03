@@ -439,5 +439,20 @@
         }
       }
     }
+  },
+  {
+    "name": "ProductSpecifications",
+    "schema": {
+      "title": "List of Product Specifications",
+      "description": "List of Product Specifications",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "headTitle": {
+          "title": "Headtitle",
+          "type": "string"
+        }
+      }
+    }
   }
 ]

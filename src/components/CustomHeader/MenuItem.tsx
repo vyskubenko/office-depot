@@ -26,7 +26,6 @@ const MenuItem = ({ item, level, onClick }: any) => {
         className={styles.navLink}
         onClick={onClick}
         variant={hasChildren ? "display" : "default"}
-        as={hasChildren ? "span" : "a"}
       >
         {item.title} 
 
