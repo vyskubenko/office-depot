@@ -5,10 +5,13 @@ import { usePDP }  from "@faststore/core"
 
 import { Breadcrumb } from '@faststore/ui'
 
+import SVGIMG from '!@svgr/webpack!../../assets/accountIcon.svg';
+
 
 
 export interface CustomBreadcrumbProps {
   showSku: boolean;
+  color: string;
 }
 
 export default function CustomBreadcrumb(props: CustomBreadcrumbProps) {
@@ -34,6 +37,7 @@ export default function CustomBreadcrumb(props: CustomBreadcrumbProps) {
   
   return (
     <section className={styles.CustomBreadcrumb} >
+        <SVGIMG fill="red" width={222} />
       <Breadcrumb breadcrumbList={breadCrumb} />
     </section>
   );

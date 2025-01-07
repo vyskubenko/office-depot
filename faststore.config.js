@@ -96,4 +96,12 @@ module.exports = {
       "https://faststore--uscertification06odp.myvtex.com/cms-releases/webhook-releases",
     ],
   },
+
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
 }
