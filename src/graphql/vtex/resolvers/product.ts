@@ -21,8 +21,6 @@ const productResolver = {
 
         const specs = root.isVariantOf.properties;
 
-        console.log(specs)
-
         if (!specs.length) {
         return [];
         }
@@ -34,6 +32,24 @@ const productResolver = {
            })
         }));
     },
+    categoryTree: (root: StoreProductRoot) => {
+
+        const specs = root;
+
+        //console.log(root.isVariantOf.items[0])
+
+        // if (!specs.length) {
+        // return [];
+        // }
+
+        // return specs.map((specs) => ({
+        // name: specs.name,
+        // values: specs.values.map(item => {
+        //     return { val: item } 
+        //    })
+        // }));
+    },
+    
   },
 };
 

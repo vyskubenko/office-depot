@@ -6,6 +6,8 @@ import ImageRow from './ImageRow/imageRow'
 import InfoCardSlider from './InfoCardSlider/InfoCardSlider'
 import TabContent from './TabContent/TabContent'
 import ProductSpecifications from './ProductSpecifications/ProductSpecifications'
+import CustomBreadcrumb from './CustomBreadcrumb/CustomBreadcrumb'
+import ManufacturerNumber from './ManufacturerNumber/ManufacturerNumber'
 
 export default {
   CustomHeader,
@@ -14,5 +16,7 @@ export default {
   ImageRow,
   InfoCardSlider,
   TabContent,
-  ProductSpecifications
+  ProductSpecifications,
+  CustomBreadcrumb,
+  ManufacturerNumber
 }

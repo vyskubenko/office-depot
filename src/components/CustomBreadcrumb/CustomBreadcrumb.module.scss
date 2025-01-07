@@ -1,0 +1,10 @@
+
+.CustomBreadcrumb {
+  margin:  var(--fs-spacing-3) auto;
+
+  @import '@faststore/ui/src/components/molecules/Breadcrumb/styles.scss';
+  @import '@faststore/ui/src/components/atoms/Link/styles.scss';
+
+
+}
+

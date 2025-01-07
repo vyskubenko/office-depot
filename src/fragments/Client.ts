@@ -9,6 +9,12 @@ export const fragment = gql(`
         installmentInterest
         installmentNumber
       }
+      categoryTree {
+        name
+        titleTag
+        href
+        slug
+      }
       properties {
         name
         originalName

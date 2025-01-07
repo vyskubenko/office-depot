@@ -11,6 +11,13 @@ type Properties {
   values: [properValues]
 }
 
+type categoryTreeType {
+  name: String
+  titleTag: String
+  href: String
+  slug: String
+}
+
 type properValues {
   val: String
 }
@@ -22,4 +29,5 @@ extend type StoreProduct {
   """
   availableInstallments: [Installments!]!
   properties: [Properties!]!
+  categoryTree: categoryTreeType
 }

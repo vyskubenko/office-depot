@@ -454,5 +454,33 @@
         }
       }
     }
+  },
+  {
+    "name": "CustomBreadcrumb",
+    "scopes": ["pdp, plp, search"],
+    "schema": {
+      "title": "CustomBreadcrumb",
+      "description": "CustomBreadcrumb",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "showSku": {
+          "title": "Show product sku in last step",
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  {
+    "name": "ManufacturerNumber",
+    "scopes": ["pdp, plp, search"],
+    "schema": {
+      "title": "Manufacturer number",
+      "description": "Manufacturer Number",
+      "type": "object",
+      "required": [],
+      "properties": {
+      }
+    }
   }
 ]

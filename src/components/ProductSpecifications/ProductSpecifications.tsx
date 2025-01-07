@@ -35,8 +35,6 @@ export default function ProductSpecifications(props: ProductSpecificationsList) 
 
   const context = usePDP()
 
-  console.log(context)
-
   const properties = context?.data?.product?.properties;
 
   if (!properties || !properties.length) {
@@ -52,6 +50,7 @@ export default function ProductSpecifications(props: ProductSpecificationsList) 
       setIndices(new Set(indices.add(index)))
     }
   }
+
   
   return (
     <section className={styles.ProductSpecificationsList} data-fs-content="ProductSpecificationsList">
@@ -61,7 +60,14 @@ export default function ProductSpecifications(props: ProductSpecificationsList) 
         <AccordionItem index={0}>
           <AccordionButton>Description</AccordionButton>
           <AccordionPanel>
-            {context?.data?.product?.description}
+            <p>{context?.data?.product?.description}</p><br/>
+
+            <p>{properties?.find((spec: any) => spec.name === "FamilyCopyBullets")?.values?.[0].val}</p><br/>
+
+            <p>{properties?.find((spec: any) => spec.name === "Item Copy Bullets")?.values?.[0].val}</p><br/>
+
+            <p>{properties?.find((spec: any) => spec.name === "Item Claims Bullet")?.values?.[0].val}</p>
+
           </AccordionPanel>
         </AccordionItem>
 
@@ -71,7 +77,7 @@ export default function ProductSpecifications(props: ProductSpecificationsList) 
             <Table>
               <TableBody>
                 {properties.map( (spec: any, i:any) => (
-                  <TableRow key={spec.i}>
+                  <TableRow key={i}>
                     <TableCell variant="header" align="left">
                       {spec.name}
                     </TableCell>
