@@ -5,11 +5,9 @@ import { usePDP }  from "@faststore/core"
 
 import { Breadcrumb } from '@faststore/ui'
 
+import { CustomBreadcrumbProps } from './CustomBreadcrumbTypes'
 
-
-export interface CustomBreadcrumbProps {
-  showSku: boolean;
-}
+//import SVGIMG from '!@svgr/webpack!../../assets/accountIcon.svg';
 
 export default function CustomBreadcrumb(props: CustomBreadcrumbProps) {
 
@@ -22,7 +20,6 @@ export default function CustomBreadcrumb(props: CustomBreadcrumbProps) {
   if (!breadCrumb || !breadCrumb.length) {
     return null
   }
-
 
   if(props?.showSku) {
     breadCrumb[breadCrumb.length-1] = {

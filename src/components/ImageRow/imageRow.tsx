@@ -5,20 +5,9 @@ import {
  } from "@faststore/ui";
 // @ts-ignore next-line
 
-import styles from "./styles.module.scss";
+import { ImageRowProps } from './imageRowTypes'
 
-interface List {
-  image: string;
-  name: string;
-  url: string;
-}
-export interface ImageRowProps {
-  list: List[];
-  title: string;
-  imageHeight: string;
-  itemsPerPage: string;
-  titleEnabled: string;
-}
+import styles from "./styles.module.scss";
 
 const ImageRow = (props: ImageRowProps) => {
 
@@ -32,9 +21,6 @@ const ImageRow = (props: ImageRowProps) => {
 
   const itemsPerPage = parseInt(props.itemsPerPage);
   const imageHeight = parseInt(props.imageHeight);
-
-
-  console.log(props)
 
   return (
     <section className={styles.imageRow} data-fs-content>

@@ -3,26 +3,12 @@ import { Link } from "@faststore/ui";
 import styles from './BannerGrid.module.scss'
 
 import {
-  useSession_unstable as useSession,
   Image_unstable as Image,
   // @ts-ignore next-line
 } from "@faststore/core/experimental";
 
-interface banner {
-  image: string;
-  name: string;
-  url: string;
-  width: string;
-}
 
-interface column {
-  column: banner[];
-}
-
-
-export interface bannerArray {
-  row: column[];
-}
+import { bannerArray } from './BannerGridTypes'
 
 export default function BannerGrid(props: bannerArray) {
   

@@ -1,20 +1,11 @@
 import React from "react";
 import { Carousel, Link } from "@faststore/ui";
 
+import { InfoCardSliderProps } from './InfoCardSliderTypes'
+
 import styles from "./styles.module.scss";
 
-interface List {
-  imageDesktop: string;
-  name: string;
-  url: string;
-}
-export interface InfoCardSliderProps {
-  list: List[];
-  itemsPerPage: number;
-  infiniteMode: boolean;
-  title: string;
-  titleEnabled: boolean;
-}
+
 
 const InfoCardSlider = ( props: InfoCardSliderProps) => {
 
