@@ -15,21 +15,7 @@ import {
  } from "@faststore/ui";
 // @ts-ignore next-line
 
-// interface banner {
-//   image: string;
-//   name: string;
-//   url: string;
-//   width: string;
-// }
-
-// interface column {
-//   column: banner[];
-// }
-
-
-export interface ProductSpecificationsList {
-  headTitle: string;
-}
+import { ProductSpecificationsList } from './ProductSpecificationsTypes'
 
 export default function ProductSpecifications(props: ProductSpecificationsList) {
 
@@ -50,7 +36,6 @@ export default function ProductSpecifications(props: ProductSpecificationsList) 
       setIndices(new Set(indices.add(index)))
     }
   }
-
   
   return (
     <section className={styles.ProductSpecificationsList} data-fs-content="ProductSpecificationsList">

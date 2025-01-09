@@ -1,7 +1,6 @@
 import React, { useState, ReactElement, FC } from "react";
 import {
   Link,
-  Button,
   Hero, 
   HeroImage, 
   HeroHeader
@@ -9,32 +8,13 @@ import {
 
 import styles from "./styles.module.scss";
 
-// @ts-ignore next-line
-import { Image_unstable as Image } from "@faststore/core/experimental";
 
+import { TabContentProps } from './TabContentTypes'
 
-interface banner {
-  image: string;
-}
-
-interface tabs {
-  title: string;
-  banner: banner;
-  content: string;
-  linkText: string;
-  href: string;
-  
-}
-export interface TabContentProps {
-  tabs: tabs[];
-}
 
 const TabContent: FC<TabContentProps> = ({ tabs }): ReactElement => {
   const [activeTab, setActiveTab] = useState(0);
   const [loading, setLoading] = useState(true);
-
-
-  console.log(tabs)
 
   return (
     <section className={styles.tabContent} data-fs-content>

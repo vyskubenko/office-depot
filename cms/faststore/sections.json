@@ -223,7 +223,7 @@
   {
     "name": "RegionHeaderBar",
     "schema": {
-      "title": "RegionBar for Header",
+      "title": "[ODP] RegionBar for Header",
       "description": "RegionBar for Header",
       "type": "object",
       "properties": {
@@ -279,7 +279,7 @@
   {
     "name": "ImageRow",
     "schema": {
-      "title": "Row for Images",
+      "title": "[ODP] Row for Images",
       "description": "Usually used to display brands and its links",
       "type": "object",
       "required": [],
@@ -332,7 +332,7 @@
   {
     "name": "InfoCardSlider",
     "schema": {
-      "title": "Info Card Slider",
+      "title": "[ODP] Info Card Slider",
       "description": "Is a list of infocardds in a carousel mode",
       "type": "object",
       "required": [],
@@ -385,7 +385,7 @@
 	{
     "name": "TabContent",
     "schema": {
-      "title": "Tab Content with Banner",
+      "title": "[ODP] Tab Content with Banner",
       "description": "Tab Content contains a banner",
       "type": "object",
       "required": [],
@@ -443,7 +443,7 @@
   {
     "name": "ProductSpecifications",
     "schema": {
-      "title": "List of Product Specifications",
+      "title": "[ODP] List of Product Specifications",
       "description": "List of Product Specifications",
       "type": "object",
       "required": [],
@@ -459,7 +459,7 @@
     "name": "CustomBreadcrumb",
     "scopes": ["pdp, plp, search"],
     "schema": {
-      "title": "CustomBreadcrumb",
+      "title": "[ODP] Breadcrumb",
       "description": "CustomBreadcrumb",
       "type": "object",
       "required": [],
@@ -475,7 +475,7 @@
     "name": "ManufacturerNumber",
     "scopes": ["pdp, plp, search"],
     "schema": {
-      "title": "Manufacturer number",
+      "title": "[ODP] Manufacturer number",
       "description": "Manufacturer Number",
       "type": "object",
       "required": [],
