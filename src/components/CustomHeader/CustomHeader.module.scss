@@ -1,13 +1,44 @@
-.customHeader {
-  background: var(--fs-color-main-1) url(../../assets/textureODP.webp) repeat;
-  @import '@faststore/ui/src/components/molecules/Dropdown/styles.scss';
+.section {
+  position: sticky;
+  top: 0;
+  z-index: var(--fs-z-index-high);
 
+  @import "@faststore/ui/src/components/atoms/Badge/styles.scss";
+  @import "@faststore/ui/src/components/atoms/Button/styles.scss";
+  @import "@faststore/ui/src/components/atoms/Icon/styles.scss";
+  @import "@faststore/ui/src/components/atoms/Input/styles.scss";
+  @import "@faststore/ui/src/components/atoms/Link/styles.scss";
+  @import "@faststore/ui/src/components/atoms/List/styles.scss";
+  @import "@faststore/ui/src/components/atoms/Logo/styles.scss";
+  @import "@faststore/ui/src/components/atoms/Price/styles.scss";
+  @import "@faststore/ui/src/components/molecules/LinkButton/styles.scss";
+  @import "@faststore/ui/src/components/molecules/NavbarLinks/styles.scss";
+  @import "@faststore/ui/src/components/molecules/ProductPrice/styles.scss";
+  @import "@faststore/ui/src/components/molecules/SearchAutoComplete/styles.scss";
+  @import "@faststore/ui/src/components/molecules/SearchDropdown/styles.scss";
+  @import "@faststore/ui/src/components/molecules/SearchHistory/styles.scss";
+  @import "@faststore/ui/src/components/molecules/SearchInputField/styles.scss";
+  @import "@faststore/ui/src/components/molecules/SearchProducts/styles.scss";
+  @import "@faststore/ui/src/components/molecules/SearchTop/styles.scss";
+  @import "@faststore/ui/src/components/organisms/SearchInput/styles.scss";
+  @import "@faststore/ui/src/components/organisms/Navbar/styles.scss";
+
+}
+
+.mainHeader {
+  background: var(--fs-color-main-1) url(../../assets/textureODP.webp) repeat;
   padding: 0 var(--fs-spacing-4);
+
+  @import '@faststore/ui/src/components/molecules/Dropdown/styles.scss';
 
   &__logo {
     padding: 0 !important;
     display: flex;
     align-items: center;
+  }
+  
+  &__logo__image {
+    display: flex;
   }
 
   &__wrapper {
@@ -28,7 +59,6 @@
     }
   }
 
-
   &__menu__wrapper {
     border-top:1px solid #E4E4E4;
     border-bottom:1px solid #E4E4E4;
@@ -39,8 +69,6 @@
 
     position: initial !important;
     --fs-navbar-links-bkg-color: transparent !important;
-
-
     
     @include media("<notebook") {
       padding: var(--fs-spacing-1) var(--fs-spacing-3) !important;
@@ -49,7 +77,6 @@
   }
 
   &__menu {
-
 
     --fs-navbar-links-list-padding-left-notebook:0;
     --fs-navbar-links-list-margin-left-notebook:0;
@@ -102,49 +129,13 @@
 
       
     }
-    
 
     &::before {
       display: none;
     }
 
-
-
   }
 }
-
-
-
-.section {
-  position: sticky;
-  top: 0;
-  z-index: var(--fs-z-index-high);
-
-  @import "@faststore/ui/src/components/atoms/Badge/styles.scss";
-  @import "@faststore/ui/src/components/atoms/Button/styles.scss";
-  @import "@faststore/ui/src/components/atoms/Icon/styles.scss";
-  @import "@faststore/ui/src/components/atoms/Input/styles.scss";
-  @import "@faststore/ui/src/components/atoms/Link/styles.scss";
-  @import "@faststore/ui/src/components/atoms/List/styles.scss";
-  @import "@faststore/ui/src/components/atoms/Logo/styles.scss";
-  @import "@faststore/ui/src/components/atoms/Price/styles.scss";
-  @import "@faststore/ui/src/components/molecules/LinkButton/styles.scss";
-  @import "@faststore/ui/src/components/molecules/NavbarLinks/styles.scss";
-  @import "@faststore/ui/src/components/molecules/ProductPrice/styles.scss";
-  @import "@faststore/ui/src/components/molecules/SearchAutoComplete/styles.scss";
-  @import "@faststore/ui/src/components/molecules/SearchDropdown/styles.scss";
-  @import "@faststore/ui/src/components/molecules/SearchHistory/styles.scss";
-  @import "@faststore/ui/src/components/molecules/SearchInputField/styles.scss";
-  @import "@faststore/ui/src/components/molecules/SearchProducts/styles.scss";
-  @import "@faststore/ui/src/components/molecules/SearchTop/styles.scss";
-  @import "@faststore/ui/src/components/organisms/SearchInput/styles.scss";
-  @import "@faststore/ui/src/components/organisms/Navbar/styles.scss";
-
-}
-
-
-
-
 
 .navbarButtons {
   display: flex;
@@ -203,8 +194,7 @@
   }
 }
 
-
-.customHeader__regionBar {
+.mainHeader__regionBar {
 
   [data-fs-button-wrapper] > span {
     display: flex;
@@ -224,8 +214,7 @@
   }
 }
 
-.customHeader__search {
-  
+.mainHeader__search {
   
   [data-fs-search-input-field] [data-fs-search-input-field-input] {
     background-color: #FFF;
@@ -242,8 +231,8 @@
     // Design Tokens for Search Input Field
     // --------------------------------------------------------
     --fs-search-input-field-height-mobile                 :40px;
-    --fs-search-input-field-height-desktop                :50px;
-    --fs-search-input-field-button-min-height             :50px;
+    --fs-search-input-field-height-desktop                :35px;
+    --fs-search-input-field-button-min-height             :35px;
   
   }
 
@@ -267,8 +256,6 @@
 }
 
 .subMenu {
-  
-  
 
   display: none;
 
@@ -301,7 +288,7 @@
       margin:0;
       top:0;
       left:0;
-        animation: fadeIn3 0.3s ease-in-out;
+      animation: fadeIn3 0.3s ease-in-out;
     }
   }
 
@@ -312,7 +299,6 @@
     min-height: 100%;
     z-index:-1;
     animation: fadeIn2 0.3s ease-in-out;
-
     padding: var(--fs-spacing-5) var(--fs-spacing-6);
 
     @include media("<notebook") {
@@ -322,13 +308,9 @@
     
   }
 
-
-
   &__item {
     width: 100%;
     
-    
-
     [data-fs-navbar-links-list-item] {
       padding: var(--fs-spacing-5) var(--fs-spacing-6);
     }
@@ -341,7 +323,6 @@
     }
     &[data-level="1"] {
       position: relative;
-      padding: 20px 0;
     }
 
     &[data-level="3"],
@@ -367,7 +348,6 @@
           font-weight: bold;
         }
 
-        
       }
 
       &[data-headtitle="true"] {
@@ -387,20 +367,18 @@
      }
     }
 
+  &:hover {
 
-    &:hover {
+    > .subMenu {
+      display: block;
 
-      > .subMenu {
-        display: block;
-
-        &[data-level="2"] {
-          display: flex;
-        }
+      &[data-level="2"] {
+        display: flex;
       }
     }
-    
-    
   }
+
+}
 
   &__col {
     margin-right:var(--fs-spacing-7) ;
@@ -411,12 +389,10 @@
   }
 }
 
-
 .navLink {
   display: flex;
   align-items: center;
 }
-
 
 @keyframes fadeIn {
   from { left: -100%;overflow:hidden }
@@ -433,12 +409,71 @@
   to { left:100%;overflow:initial }
 }
 
-
 @keyframes menuLevel2 {
   from { top: -100%; }
   to { top:0; }
 }
 
+.cartLabel {
+  display: none;
+}
+
+.cartIcon {
+  color: #fff;
+}
+
+.cartQty {
+  display: flex;
+  padding: 2px 7px;
+  font-size: 0.65rem;
+  color: #000;
+  background-color: #FFCB30;
+  border-radius: 10px;
+  width: auto;
+  min-width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: -5px;
+}
+
+.navButtons__item {
+  
+  &__contactLabel {
+    display: none;
+  }
+
+  &__itemCart[data-fs-button] {
+    position: relative;
+    margin: 0 1rem;
+
+    .navButtons__item__text {
+      display: none;
+    }
+
+  }
+
+  [data-icon="account"] {
+    color: #fff;
+  }
+
+  [data-icon="help"] {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__login {
+    color: #fff;
+  }
+
+  &__text__login {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #fff;
+    white-space: nowrap;
+  }
+}
 
 @include media("<notebook") {
 
@@ -447,7 +482,7 @@
     margin-right: 0 !important;
   }
 
-  .customHeader__wrapper {
+  .mainHeader__wrapper {
     flex-wrap: wrap;
 
     [data-fs-search-dropdown] {
@@ -456,19 +491,20 @@
     }
   }
 
-  .customHeader__logo {
+  .mainHeader__logo {
     margin: 0 auto 0 0;
   }
-  
-  .customHeader__regionBar,
+
+  .CustomHeader_navButtons__item__text,
+  .mainHeader__regionBar,
   .navButtons__item__text,
-  .customHeader__navLinks,
+  .mainHeader__navLinks,
   .navButtons__item__contact {
     display: none;
   }
 
   .navLinks__mobile {
-    .customHeader__navLinks {
+    .mainHeader__navLinks {
       display: block;
     }
     .subMenu {
@@ -482,7 +518,7 @@
     }
   
   }
-  .customHeader__search[data-fs-search-input] { 
+  .mainHeader__search[data-fs-search-input] { 
     order: 10;
     width: 100%;
     margin: 0;
@@ -491,10 +527,15 @@
 
   .navButtons__item {
     margin: 0 var(--fs-spacing-3);
+
+    .contactLabel {
+      color: red;
+    }
+
     &Cart {
       width: auto !important;
       margin: 0 var(--fs-spacing-3);
-      
+
       [data-fs-button-wrapper] {
         padding: 0 10px !important;
       }

@@ -52,133 +52,131 @@ export default function CustomHeader(props: CustomHeaderProps)  {
   return (
     <Navbar
       scrollDirection={scrollDirection}
-      className={`${styles.section} ${styles.customHeader} section-navbar`}
+      className={`${styles.section} ${styles.mainHeader} section-navbar`}
     >
 
       <NavbarHeader>
-          <div className={styles.customHeader__wrapper}>
+        <div className={styles.mainHeader__wrapper}>
 
-            <Link
-              data-fs-navbar-logo
-              href={props.logo.link ? props.logo.link.url : "/"}
-              title={props.logo.link.title}
-              prefetch={false}
-              className={styles.customHeader__logo}
-            >
-              <Image
-                  data-fs-image
-                  style={{ width: "100%", height: "auto" }}
-                  src={props.logo.src}
-                  width={141}
-                  height={50}
-                  alt={props.logo.link.title}
-                  priority={true}
-                  loading="eager"
+          <Link
+            data-fs-navbar-logo
+            href={props.logo.link ? props.logo.link.url : "/"}
+            title={props.logo.link.title}
+            prefetch={false}
+            className={styles.mainHeader__logo__link}
+          >
+            <img
+              src={props.logo.src}
+              alt={props.logo.link.title}
+              width={141}
+              height={50}
+              className={styles.mainHeader__logo__image}
+              loading="eager"
+            />
+          </Link>
+
+          <div className={styles.mainHeader__wrapper__content}>
+
+            <Menu menu={mainMenu} />
+
+            <SearchInput  className={styles.mainHeader__search} />
+
+            <NavbarButtons className={styles.navbarButtons} searchExpanded={false}>
+
+              {navButtons && navButtons.length > 0 && (
+                <>
+                  {navButtons.map((item, index) => (
+                    <Link
+                        key={index}
+                        href={item.href}
+                        title={item.title}
+                        className={styles.navButtons__item}
+                      >
+                        <img src={item.icon} height={22} />
+                      </Link>
+                  ))}
+                </>
+              )}
+
+              {region?.enabled && (
+                <RegionBar
+                  label="Set your location"
+                  editLabel="Delivery: "
+                  postalCode={postalCode}
+                  className={styles.mainHeader__regionBar}
+                  onButtonClick={() => openModal()}
                 />
-            </Link>
+              )}
+              
+              <Link
+                href="/contact-us"
+                className={`${styles.navButtons__item} ${styles.navButtons__item__contact}`}
+              >
+                <HelpIcon data-icon="help" className={styles.navButtons__item__contactIcon} />
+                <span className={`${styles.navButtons__item__text} ${styles.navButtons__item__contactLabel}`}>
+                  Contact
+                </span>
+              </Link>
 
-            <div className={styles.customHeader__wrapper__content}>
+              
+              <IconButton
+                data-fs-cart-toggle
+                aria-label="cart"
+                icon={
+                  <BagIcon width={25} height={25} className={styles.navButtons__item__cartIcon} />
+                }
+                className={`${styles.navButtons__item} ${styles.navButtons__item__itemCart}`}
+                iconPosition="right"
+                onClick={() => {
+                  toggleCart();
+                }}
+              >
+                {/* <Badge counter variant="info">
+                  
+                </Badge> */}
+                <span className={`${styles.navButtons__item__text} ${styles.cartLabel}`}>
+                  Cart
+                </span>
+                <span className={styles.cartQty}>
+                  {cart.totalItems}
+                </span>
+              </IconButton>
 
-              <Menu menu={mainMenu} />
+              <Link
+                href={person?.id ? `/account` : `/login`}
+                className={`${styles.navButtons__item__text} ${styles.navButtons__item__login}`}
+              >
+                <span className={`${styles.navButtons__item__text} ${styles.navButtons__item__text__login}`}>
+                  Log in
+                </span>
+                 {/*<MyAccountIcon className={`${styles.navButtons__item__icon}`} data-icon="account" />*/}
+              </Link>
 
-              <SearchInput  className={styles.customHeader__search} />
+              
+              <IconButton
+                data-fs-navbar-button-menu
+                aria-label="Open Menu"
+                className={`${styles.navButtons__item} ${styles.buttonMenu}`}
+                icon={displayNavbar ? <img
+                  src={closeIcon.src}
+                  width={closeIcon.width}
+                  height={closeIcon.height}
+                  data-fs-icon
+                /> : <Icon name="List" width={30} height={30} />}
+                onClick={displayNavbar ? closeNavbar : openNavbar}
+              />
+            </NavbarButtons>
 
-              <NavbarButtons className={styles.navbarButtons} searchExpanded={false}>
-
-                {navButtons && navButtons.length > 0 && (
-                  <>
-                    {navButtons.map((item, index) => (
-                      <Link
-                          key={index}
-                          href={item.href}
-                          title={item.title}
-                          className={styles.navButtons__item}
-                        >
-                          <img src={item.icon} height={22} />
-                        </Link>
-                    ))}
-                  </>
-                )}
-
-                {region?.enabled && (
-                  <RegionBar
-                    label="Set your location"
-                    editLabel="Delivery: "
-                    postalCode={postalCode}
-                    className={styles.customHeader__regionBar}
-                    onButtonClick={() => openModal()}
-                  />
-                )}
-                
-                <Link
-                  href="/contact-us"
-                  className={`${styles.navButtons__item} ${styles.navButtons__item__contact}`}
-                >
-                  <HelpIcon data-icon="help" />
-                  <span className={styles.navButtons__item__text}>
-                    Help
-                  </span>
-                </Link>
-
-                
-                <IconButton
-                  data-fs-cart-toggle
-                  aria-label="cart"
-                  icon={
-                    <BagIcon/>
-                  }
-                  className={`${styles.navButtons__item} ${styles.navButtons__itemCart}`}
-                  iconPosition="right"
-                  onClick={() => {
-                    toggleCart();
-                  }}
-                >
-                  {/* <Badge counter variant="info">
-                    
-                  </Badge> */}
-                  <span className={styles.navButtons__item__text}>
-                    Cart
-                  </span>
-                  <span className={styles.cartQty}>
-                    {cart.totalItems}
-                  </span>
-                </IconButton>
-
-                <Link
-                  href={person?.id ? `/account` : `/login`}
-                  className={styles.navButtons__item}
-                >
-                  <MyAccountIcon className={`${styles.navButtons__item__icon}`} data-icon="account" />
-                  <span className={styles.navButtons__item__text}>
-                    Account
-                  </span>
-                </Link>
-
-                
-                <IconButton
-                  data-fs-navbar-button-menu
-                  aria-label="Open Menu"
-                  className={`${styles.navButtons__item} ${styles.buttonMenu}`}
-                  icon={displayNavbar ? <img
-                    src={closeIcon.src}
-                    width={closeIcon.width}
-                    height={closeIcon.height}
-                    data-fs-icon
-                  /> : <Icon name="List" width={30} height={30} />}
-                  onClick={displayNavbar ? closeNavbar : openNavbar}
-                />
-              </NavbarButtons>
-
-            </div>
-
-            
           </div>
- 
+
+          
+        </div>
+
       </NavbarHeader>
 
       {displayNavbar && (
 
-        <div  className={styles.navLinks__mobile}>
+        <div className={styles.navLinks__mobile}>
           <Menu menu={mainMenu} />
         </div>
         
