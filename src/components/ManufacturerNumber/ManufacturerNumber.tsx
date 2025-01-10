@@ -8,6 +8,8 @@ export default function ManufacturerNumber() {
 
   const context = usePDP()
 
+  console.log(context)
+
   const properties = context?.data?.product?.properties;
 
   let ManufacturerNumber = properties?.find((spec: any) => spec.name === "Manufacturer Part Number")?.values?.[0].val
@@ -15,6 +17,7 @@ export default function ManufacturerNumber() {
   if (!ManufacturerNumber || !properties.length) {
     return null
   }
+  
   
   return (
     <section className={styles.ManufacturerNumber} data-fs-content="ManufacturerNumber" >

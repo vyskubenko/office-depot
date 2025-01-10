@@ -49,6 +49,12 @@ const productResolver = {
         //    })
         // }));
     },
+    recommendations: (root: StoreProductRoot) => {
+
+        console.log(`22222222`, root)
+
+        return root
+    },
     
   },
 };
