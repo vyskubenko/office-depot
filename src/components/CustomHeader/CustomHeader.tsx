@@ -56,6 +56,7 @@ export default function CustomHeader(props: CustomHeaderProps)  {
       className={`${styles.section} ${styles.mainHeader} section-navbar`}
     >
 
+
       <NavbarHeader data-fs-navbar-header>
         <div data-fs-navbar-header-wrapper className={styles.mainHeader__wrapper}>
 
