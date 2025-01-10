@@ -4,7 +4,7 @@
   z-index: var(--fs-z-index-high);
 
   @import "@faststore/ui/src/components/atoms/Badge/styles.scss";
-  @import "@faststore/ui/src/components/atoms/Button/styles.scss";
+  
   @import "@faststore/ui/src/components/atoms/Icon/styles.scss";
   @import "@faststore/ui/src/components/atoms/Input/styles.scss";
   @import "@faststore/ui/src/components/atoms/Link/styles.scss";
@@ -12,7 +12,7 @@
   @import "@faststore/ui/src/components/atoms/Logo/styles.scss";
   @import "@faststore/ui/src/components/atoms/Price/styles.scss";
   @import "@faststore/ui/src/components/molecules/LinkButton/styles.scss";
-  @import "@faststore/ui/src/components/molecules/NavbarLinks/styles.scss";
+  
   @import "@faststore/ui/src/components/molecules/ProductPrice/styles.scss";
   @import "@faststore/ui/src/components/molecules/SearchAutoComplete/styles.scss";
   @import "@faststore/ui/src/components/molecules/SearchDropdown/styles.scss";
@@ -21,7 +21,7 @@
   @import "@faststore/ui/src/components/molecules/SearchProducts/styles.scss";
   @import "@faststore/ui/src/components/molecules/SearchTop/styles.scss";
   @import "@faststore/ui/src/components/organisms/SearchInput/styles.scss";
-  @import "@faststore/ui/src/components/organisms/Navbar/styles.scss";
+  
 
 }
 
@@ -137,6 +137,10 @@
   }
 }
 
+.theme [data-fs-navbar-links-list-item] [data-fs-link] {
+  color: #fff;
+}
+
 .navbarButtons {
   display: flex;
   align-items: center;
@@ -242,6 +246,15 @@
     position: absolute;
     top:3px;
   }
+}
+
+.section [data-fs-region-bar] {
+  margin-right: 1rem;
+}
+
+.section [data-testid="data-fs-button-dropdown-link"][data-fs-link][data-fs-link-variant=display]:visited,
+.section [data-testid="data-fs-button-dropdown-link"][data-fs-link][data-fs-link-variant=display] {
+  color: #fff;
 }
 
 .buttonMenu {
@@ -432,9 +445,10 @@
   width: auto;
   min-width: 20px;
   height: 20px;
+  line-height: 1.5;
   position: absolute;
-  top: 15px;
-  right: -5px;
+  top: 5px;
+  right: -11px;
 }
 
 .navButtons__item {

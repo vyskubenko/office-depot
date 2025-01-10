@@ -19,7 +19,7 @@ export const fragment = gql(`
         name
         originalName
         values {
-            val
+          val
         }
       }
     }
