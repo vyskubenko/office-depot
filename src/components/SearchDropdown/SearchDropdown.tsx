@@ -51,7 +51,7 @@ function SearchDropdown({ sort, ...otherProps }) {
         ))}
       </UISearchAutoComplete>
       <SearchProducts>
-        {products.map((product, index) => {
+        {products.map((product : any, index : number) => {
           const productParsed = product as ProductSummary_ProductFragment
           return (
             <SearchProductItem
