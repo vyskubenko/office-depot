@@ -246,7 +246,7 @@
 }
 
 .section [data-fs-region-bar] {
-  margin-right: --fs-spacing-3 ;
+  margin-right: var(--fs-spacing-3) ;
 }
 
 .section [data-testid="data-fs-button-dropdown-link"][data-fs-link][data-fs-link-variant=display]:visited,
@@ -461,7 +461,7 @@
 
   &__itemCart[data-fs-button] {
     position: relative;
-    margin: 0 --fs-spacing-3;
+    margin: 0 var(--fs-spacing-3);
 
     .navButtons__item__text {
       display: none;
