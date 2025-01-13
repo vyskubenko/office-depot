@@ -31,7 +31,7 @@ const MenuItem = ({ item, level, onClick }: any) => {
       >
         {item.title} 
 
-        {level <= 2 ? <ArrowRightPath /> : ``}
+        {level <= 2 ? <ArrowRightPath data-fs-menu-icon data-icon="arrowDown" className={styles.menu__icon}  /> : ``}
         
       </Link>
 

@@ -15,7 +15,7 @@ export default function BannerGrid(props: bannerArray) {
   const BannerGrid = props
   
   return (
-    <section className={styles.bannerGrid} data-fs-content="BannerGrid">
+    <section className={`section ${styles.bannerGrid}`} data-fs-content="BannerGrid">
       {BannerGrid.row?.length && BannerGrid.row.map((Row, bgix) => (
         <div className={styles.bannerGrid__row} key={bgix}>
            {Row.column?.length && Row.column.map((banner, bix) => (
