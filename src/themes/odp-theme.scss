@@ -1,0 +1,131 @@
+// ----------------------------------------------------------
+// GLOBAL TOKENS
+// Custom Theme
+// ----------------------------------------------------------
+
+@layer theme {
+  .theme {
+    // --------------------------------------------------------
+    // Colors (Branding Core)
+    // --------------------------------------------------------
+    --fs-color-main-0: #f1f2f3;
+    --fs-color-main-1: #0f2b4d;
+    --fs-color-main-2: ;
+    --fs-color-main-3: ;
+    --fs-color-main-4: ;
+
+    --fs-color-accent-0: ;
+    --fs-color-accent-1: ;
+    --fs-color-accent-2: ;
+    --fs-color-accent-3: ;
+    --fs-color-accent-4: ;
+
+    --fs-color-neutral-0: ;
+    --fs-color-neutral-1: ;
+    --fs-color-neutral-2: ;
+    --fs-color-neutral-3: ;
+    --fs-color-neutral-4: ;
+    --fs-color-neutral-5: ;
+    --fs-color-neutral-6: ;
+    --fs-color-neutral-7: ;
+
+    --fs-color-primary-text: ;
+    --fs-color-primary-bkg: ;
+    --fs-color-primary-bkg-hover: ;
+    --fs-color-primary-bkg-active: ;
+    --fs-color-primary-bkg-light: ;
+    --fs-color-primary-bkg-light-active: ;
+    --fs-color-secondary-text: ;
+    --fs-color-secondary-bkg: ;
+    --fs-color-secondary-bkg-hover: ;
+    --fs-color-secondary-bkg-active: ;
+    --fs-color-secondary-bkg-light: ;
+    --fs-color-secondary-bkg-light-active: ;
+    --fs-color-tertiary-text: ;
+    --fs-color-tertiary-bkg: ;
+    --fs-color-tertiary-bkg-hover: ;
+    --fs-color-tertiary-bkg-active: ;
+    --fs-color-tertiary-bkg-light: ;
+    --fs-color-tertiary-bkg-light-active: ;
+
+    --fs-color-body-bkg: ;
+    --fs-body-bkg: ;
+    --fs-color-action-text: ;
+    --fs-color-action-bkg: ;
+    --fs-color-action-bkg-hover: ;
+    --fs-color-action-bkg-active: ;
+    --fs-color-action-bkg-light: ;
+    --fs-color-action-bkg-light-active: ;
+    --fs-color-link: ;
+    --fs-color-link-hover: ;
+    --fs-color-link-active: ;
+    --fs-color-link-visited: ;
+    --fs-color-link-inverse: ;
+    --fs-color-text: ;
+    --fs-color-text-light: ;
+    --fs-color-text-inverse: ;
+    --fs-color-text-display: ;
+    --fs-color-focus-ring : ;
+    --fs-color-focus-ring-outline: ;
+    --fs-color-focus-ring-danger: ;
+
+    --fs-color-success-text: ;
+    --fs-color-success-bkg: ;
+    --fs-color-success-border: ;
+    --fs-color-warning-text: ;
+    --fs-color-warning-bkg: ;
+    --fs-color-warning-border: ;
+    --fs-color-danger-text: ;
+    --fs-color-danger-bkg: ;
+    --fs-color-danger-border: ;
+    --fs-color-info-text: ;
+    --fs-color-info-bkg: ;
+    --fs-color-highlighted-text: ;
+    --fs-color-highlighted-bkg: ;
+    --fs-color-neutral-text: ;
+    --fs-color-neutral-bkg: ;
+    --fs-color-disabled-text: ;
+    --fs-color-disabled-bkg: ;
+
+    --fs-color-odp-red: #B30000;
+    --fs-color-odp-yellow: #FFCB30;
+
+    --fs-navbar-links-bkg-color:transparent;
+
+
+    // --------------------------------------------------------
+    // Typography (Branding Core)
+    // --------------------------------------------------------
+
+    --fs-text-face-body: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --fs-text-face-title: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+
+
+    // NUMERIC SCALE
+
+
+    // --------------------------------------------------------
+    // Spacing (UI Essentials)
+    // --------------------------------------------------------
+
+    // --------------------------------------------------------
+    // Grid & Layout (UI Essentials)
+    // --------------------------------------------------------
+    --fs-grid-max-width: 87%;
+
+    // --------------------------------------------------------
+    // Interactive Controls (UI Essentials)
+    // --------------------------------------------------------
+
+    // --------------------------------------------------------
+    // Refinements
+    // --------------------------------------------------------
+
+    // --------------------------------------------------------
+    // FS UI Components
+    // --------------------------------------------------------
+    // Add here the customizations for FastStore UI components.
+  }
+  
+}

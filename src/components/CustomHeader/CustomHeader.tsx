@@ -51,21 +51,24 @@ export default function CustomHeader(props: CustomHeaderProps)  {
 
   return (
     <Navbar
+      data-fs-navbar
       scrollDirection={scrollDirection}
       className={`${styles.section} ${styles.mainHeader} section-navbar`}
     >
 
-      <NavbarHeader>
-        <div className={styles.mainHeader__wrapper}>
+
+      <NavbarHeader data-fs-navbar-header>
+        <div data-fs-navbar-header-wrapper className={styles.mainHeader__wrapper}>
 
           <Link
-            data-fs-navbar-logo
+            data-fs-navbar-logo-link
             href={props.logo.link ? props.logo.link.url : "/"}
             title={props.logo.link.title}
             prefetch={false}
             className={styles.mainHeader__logo__link}
           >
             <img
+              data-fs-navbar-logo-image
               src={props.logo.src}
               alt={props.logo.link.title}
               width={141}
@@ -75,24 +78,25 @@ export default function CustomHeader(props: CustomHeaderProps)  {
             />
           </Link>
 
-          <div className={styles.mainHeader__wrapper__content}>
+          <div data-fs-mainHeader-wrapper className={styles.mainHeader__wrapper__content}>
 
-            <Menu menu={mainMenu} />
+            <Menu data-fs-menu menu={mainMenu} />
 
-            <SearchInput  className={styles.mainHeader__search} />
+            <SearchInput data-fs-search className={styles.mainHeader__search} />
 
-            <NavbarButtons className={styles.navbarButtons} searchExpanded={false}>
+            <NavbarButtons data-fs-navButtons className={styles.navbarButtons} searchExpanded={false}>
 
               {navButtons && navButtons.length > 0 && (
                 <>
                   {navButtons.map((item, index) => (
                     <Link
+                        data-fs-navButtons-item-link
                         key={index}
                         href={item.href}
                         title={item.title}
                         className={styles.navButtons__item}
                       >
-                        <img src={item.icon} height={22} />
+                        <img data-fs-navButtons-item-image src={item.icon} height={22} />
                       </Link>
                   ))}
                 </>
@@ -100,6 +104,7 @@ export default function CustomHeader(props: CustomHeaderProps)  {
 
               {region?.enabled && (
                 <RegionBar
+                  data-fs-regionBar
                   label="Set your location"
                   editLabel="Delivery: "
                   postalCode={postalCode}
@@ -109,11 +114,12 @@ export default function CustomHeader(props: CustomHeaderProps)  {
               )}
               
               <Link
+                data-fs-navButtons-item-contact-link
                 href="/contact-us"
                 className={`${styles.navButtons__item} ${styles.navButtons__item__contact}`}
               >
-                <HelpIcon data-icon="help" className={styles.navButtons__item__contactIcon} />
-                <span className={`${styles.navButtons__item__text} ${styles.navButtons__item__contactLabel}`}>
+                <HelpIcon data-fs-navButtons-item-contact-icon data-icon="help" className={styles.navButtons__item__contactIcon} />
+                <span data-fs-navButtons-item-text data-fs-navButtons-item-contact-text  className={`${styles.navButtons__item__text} ${styles.navButtons__item__contactLabel}`}>
                   Contact
                 </span>
               </Link>
@@ -123,7 +129,7 @@ export default function CustomHeader(props: CustomHeaderProps)  {
                 data-fs-cart-toggle
                 aria-label="cart"
                 icon={
-                  <BagIcon width={25} height={25} className={styles.navButtons__item__cartIcon} />
+                  <BagIcon data-fs-cart-toggle-icon width={25} height={25} className={styles.navButtons__item__cartIcon} />
                 }
                 className={`${styles.navButtons__item} ${styles.navButtons__item__itemCart}`}
                 iconPosition="right"
@@ -134,19 +140,20 @@ export default function CustomHeader(props: CustomHeaderProps)  {
                 {/* <Badge counter variant="info">
                   
                 </Badge> */}
-                <span className={`${styles.navButtons__item__text} ${styles.cartLabel}`}>
+                <span data-fs-cartLabel className={`${styles.navButtons__item__text} ${styles.cartLabel}`}>
                   Cart
                 </span>
-                <span className={styles.cartQty}>
+                <span data-fs-cartQty className={styles.cartQty}>
                   {cart.totalItems}
                 </span>
               </IconButton>
 
               <Link
+                data-fs-navButtons-item-login-link
                 href={person?.id ? `/account` : `/login`}
                 className={`${styles.navButtons__item__text} ${styles.navButtons__item__login}`}
               >
-                <span className={`${styles.navButtons__item__text} ${styles.navButtons__item__text__login}`}>
+                <span data-fs-navButtons-item-text data-fs-navButtons-item-login-text className={`${styles.navButtons__item__text} ${styles.navButtons__item__text__login}`}>
                   Log in
                 </span>
                  {/*<MyAccountIcon className={`${styles.navButtons__item__icon}`} data-icon="account" />*/}
@@ -162,7 +169,7 @@ export default function CustomHeader(props: CustomHeaderProps)  {
                   width={closeIcon.width}
                   height={closeIcon.height}
                   data-fs-icon
-                /> : <Icon name="List" width={30} height={30} />}
+                /> : <Icon data-fs-navbar-button-menu-icon name="List" width={30} height={30} />}
                 onClick={displayNavbar ? closeNavbar : openNavbar}
               />
             </NavbarButtons>
@@ -176,8 +183,8 @@ export default function CustomHeader(props: CustomHeaderProps)  {
 
       {displayNavbar && (
 
-        <div className={styles.navLinks__mobile}>
-          <Menu menu={mainMenu} />
+        <div data-fs-navLinks-mobile className={styles.navLinks__mobile}>
+          <Menu data-fs-navLinks-mobile-menu  menu={mainMenu} />
         </div>
         
       )}

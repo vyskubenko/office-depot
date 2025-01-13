@@ -15,11 +15,13 @@ const MenuItem = ({ item, level, onClick }: any) => {
 
   return (
     <NavbarLinksListItem
+      data-fs-menu-item
       className={`${styles.subMenu__item} ${item.headTitle ? 'subMenu__item__headTitle' : ''} ${hasChildren ? "has-children" : ""} `}
       data-level={level}
       data-headtitle={item.headTitle}
     >
       <Link
+        data-fs-menu-item-link
         data-fs-button-dropdown-link-highlight={item.headTitle}
         href={item.href}
         data-testid="data-fs-button-dropdown-link"
@@ -29,7 +31,7 @@ const MenuItem = ({ item, level, onClick }: any) => {
       >
         {item.title} 
 
-        {level <= 2 ? <ArrowRightPath /> : ``}
+        {level <= 2 ? <ArrowRightPath data-fs-menu-icon data-icon="arrowDown" className={styles.menu__icon}  /> : ``}
         
       </Link>
 
