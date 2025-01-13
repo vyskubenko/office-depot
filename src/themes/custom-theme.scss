@@ -1,0 +1,60 @@
+// ----------------------------------------------------------
+// GLOBAL TOKENS
+// Custom Theme
+// ----------------------------------------------------------
+
+@layer theme {
+  .theme {
+    // --------------------------------------------------------
+    // Colors (Branding Core)
+    // --------------------------------------------------------
+    --fs-color-main-0: #f1f2f3;
+    --fs-color-main-1: #0f2b4d;
+    
+    --fs-color-primary-text: #0f2b4d;
+
+    --fs-newsletter-main-text-color: #ffffff;
+
+    
+    --fs-color-odp-red: #B30000;
+    --fs-color-odp-yellow: #FFCB30;
+
+    --fs-navbar-links-bkg-color:transparent;
+
+
+    // --------------------------------------------------------
+    // Typography (Branding Core)
+    // --------------------------------------------------------
+
+    --fs-text-face-body: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --fs-text-face-title: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+
+
+    // NUMERIC SCALE
+
+
+    // --------------------------------------------------------
+    // Spacing (UI Essentials)
+    // --------------------------------------------------------
+
+    // --------------------------------------------------------
+    // Grid & Layout (UI Essentials)
+    // --------------------------------------------------------
+    --fs-grid-max-width: 87%;
+
+    // --------------------------------------------------------
+    // Interactive Controls (UI Essentials)
+    // --------------------------------------------------------
+
+    // --------------------------------------------------------
+    // Refinements
+    // --------------------------------------------------------
+
+    // --------------------------------------------------------
+    // FS UI Components
+    // --------------------------------------------------------
+    // Add here the customizations for FastStore UI components.
+  }
+  
+}

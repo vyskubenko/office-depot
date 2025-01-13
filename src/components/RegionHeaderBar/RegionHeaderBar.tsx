@@ -42,20 +42,21 @@ export default function RegionHeaderBar(props: RegionHeader) {
   const RegionHeaderBarProps = props
   
   return (
-    <section className={styles.RegionHeaderBar}>
+    <section className={styles.RegionHeaderBar} data-fs-regionBar-header>
 
-      <div className={styles.RegionHeaderBar__wrapper}>
-        <div className={styles.RegionHeaderBar__info}>
+      <div className={styles.RegionHeaderBar__wrapper} data-fs-regionBar-header-wrapper>
+        <div className={styles.RegionHeaderBar__info} data-fs-regionBar-header-info>
             <TopBarItem topbar={RegionHeaderBarProps.topbar} ></TopBarItem>
         </div>
 
         <RegionBar
           label="Set your location"
           editLabel="Deliver to: "
-          icon={<Icon name="MapPin" />}
+          icon={<Icon name="MapPin" data-fs-regionBar-icon />}
           postalCode={postalCode}
           className={styles.RegionHeaderBar__region}
           onButtonClick={() => openModal()}
+          data-fs-regionBar-region
         />
       </div>
     </section>

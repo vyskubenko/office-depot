@@ -196,6 +196,7 @@ const SearchInput = forwardRef<SearchInputRef, SearchInputProps>(
               src={searchIcon.src}
               width={searchIcon.width}
               height={searchIcon.height}
+              data-fs-search-icon
             />
           }
           {...otherProps}
