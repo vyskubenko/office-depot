@@ -237,16 +237,15 @@
   
   }
 
-  [data-fs-search-input-field] [data-fs-icon-button][data-fs-button-variant] {
-    left: 0;
-    right: initial;
-    position: absolute;
-    top:3px;
+  [data-testid=fs-search-button] {
+    width: 44px;
   }
+
 }
 
 .section [data-fs-region-bar] {
-  margin-right: var(--fs-spacing-3) ;
+  margin-right: var(--fs-spacing-3);
+  min-width: 138px;
 }
 
 .section [data-testid="data-fs-button-dropdown-link"][data-fs-link][data-fs-link-variant=display]:visited,
