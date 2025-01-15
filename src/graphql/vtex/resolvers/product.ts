@@ -51,7 +51,15 @@ const productResolver = {
     },
     recommendations: (root: StoreProductRoot) => {
 
-        console.log(`22222222`, root)
+        // console.log(`22222222`, root)
+
+
+        // fetch(`/api/catalog_system/pub/products/search/`)
+        // .then(response => response.json())
+		// 	.then(function (data) {
+
+        //         console.log(data)
+        //     })
 
         return root
     },

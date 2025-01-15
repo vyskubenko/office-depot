@@ -3,6 +3,12 @@ import styles from './ProductSpecifications.module.scss'
 
 import { usePDP }  from "@faststore/core"
 
+import { gql } from "@faststore/core/api";
+
+import { useLazyQuery_unstable as useLazyQuery } from "@faststore/core/experimental";
+
+
+
 import { 
   Table,
   TableBody,
@@ -17,9 +23,33 @@ import {
 
 import { ProductSpecificationsList } from './ProductSpecificationsTypes'
 
+export const query = gql(`
+query SubmitContactForm($data: ContactFormInput!) {
+  submitContactForm(input: $data) {
+    message
+  }
+}
+`);
+
+
 export default function ProductSpecifications(props: ProductSpecificationsList) {
 
   const context = usePDP()
+
+  //----
+
+  const [submitContactForm, { data, error }] = useLazyQuery(query, {
+    data: { sku: "" },
+  });
+
+
+  console.log(`submitContactForm ---->`)
+
+  const optionsSPecs = submitContactForm({ data : { sku: "test" }})
+  console.log()
+
+
+  //-----
 
   const properties = context?.data?.product?.properties;
 

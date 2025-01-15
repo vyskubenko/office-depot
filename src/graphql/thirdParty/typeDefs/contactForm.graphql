@@ -1,0 +1,11 @@
+type ContactFormResponse {
+  message: String
+}
+
+input ContactFormInput {
+  sku: String!
+}
+
+type Query {
+  submitContactForm(input: ContactFormInput!): ContactFormResponse
+}
