@@ -23,8 +23,7 @@ const ImageRow = (props: ImageRowProps) => {
   const imageHeight = parseInt(props.imageHeight);
 
   return (
-    <section className={styles.imageRow} data-fs-content>
-
+    <section className={`section ${styles.imageRow}`} data-fs-image-row data-fs-content>
 
       {props.titleEnabled ?? (
         <h2 className={styles.imageRow__title}>{props.title}</h2>

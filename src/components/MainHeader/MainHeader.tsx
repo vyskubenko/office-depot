@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CustomHeader.module.scss";
+import styles from "./MainHeader.module.scss";
 import {
   RegionBar,
   IconButton,
@@ -33,9 +33,9 @@ import {
 } from "@faststore/core/experimental";
 
 
-import { CustomHeaderProps } from './CustomHeaderTypes'
+import { MainHeaderProps } from './MainHeaderTypes'
 
-export default function CustomHeader(props: CustomHeaderProps)  {
+export default function MainHeader(props: MainHeaderProps)  {
   const scrollDirection = useScrollDirection();
   const { openNavbar, closeNavbar, navbar: displayNavbar } = useUI();
 

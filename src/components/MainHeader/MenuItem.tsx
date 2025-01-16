@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavbarLinksListItem, Link, Button } from "@faststore/ui";
 
-import styles from "./CustomHeader.module.scss";
+import styles from "./MainHeader.module.scss";
 
 import { CloseIcon, MenuArrow,ArrowIcon, ArrowRightPath } from "../../assets/Icons";
 

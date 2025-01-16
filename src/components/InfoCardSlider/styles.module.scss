@@ -50,19 +50,13 @@
     }
   }
 
-	&__title {
-		color: var(--fs-color-main-1);
-		font-family: var(--fs-text-face-title);
+  [data-fs-infocard-title] {
+		font-family: var(--fs-color-primary-text);
 		font-size: var(--fs-text-size-7);
-		font-weight: 700;
+		font-weight: var(--fs-text-weight-bold);
 		text-align: center;
-
-
-		
 		margin: 0 0 var(--fs-spacing-5) 0;
-
 	}
-
 
   &__Carousel {
     width: 100%;
@@ -77,9 +71,9 @@
     clear: both;
 
     &__title {
-      color: var(--fs-color-main-1);
+      color: var(--fs-color-primary-text);
       font-size: var(--fs-text-size-4);
-      font-weight: bold;
+      font-weight: var(--fs-text-size-7);
       text-transform: none;
       padding: 10px 0;
       margin-bottom: var(--fs-spacing-3);

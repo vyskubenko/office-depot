@@ -26,7 +26,7 @@ import {
 //import { formatSearchPath } from 'src/sdk/search/formatSearchPath'
 import { useSearchHistory_unstable, useSuggestions_unstable } from '@faststore/core/experimental'
 
-import bagIcon from "../../assets/searchIcon.svg"
+import searchIcon from "../../assets/searchIcon.svg"
 
 
 type FormatSearchPath = {
@@ -193,9 +193,11 @@ const SearchInput = forwardRef<SearchInputRef, SearchInputProps>(
           value={searchQuery}
           buttonIcon={
             <img
-              src={bagIcon.src}
-              width={bagIcon.width}
-              height={bagIcon.height}
+              src={searchIcon.src}
+              width={searchIcon.width}
+              height={searchIcon.height}
+              data-fs-search-icon
+              aria-label={`search icon`}
             />
           }
           {...otherProps}

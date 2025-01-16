@@ -6,8 +6,8 @@ const SearchOpenButton = ({ setOpenSearch }: any) => {
 
     return (
         <Button data-fs-search-open-modal-button onClick={handleToggleModal}>
-            <Icon name="MagnifyingGlass" />
-            <p>Search</p>
+            <Icon name="MagnifyingGlass" data-fs-search-open-modal-button-icon />
+            <p data-fs-search-open-modal-button-label>Search</p>
         </Button>
     );
 };
