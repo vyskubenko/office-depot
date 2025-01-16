@@ -15,7 +15,7 @@ const productSpecsResolver = {
       // console.log(storeConfig)
       try {
 
-        console.log(`resolver getProductSpecs2`, data,sku)
+        //console.log(`resolver getProductSpecs2`, data,sku)
         return
 
         const response = await fetch(

@@ -17,22 +17,26 @@ export default function SimilarProducts() {
   if (!similar.length) {
     return null
   }
-
-  console.log(similar)
-  
   
   return (
-    <section className={styles.SimilarProducts} data-fs-content="SimilarProducts" >
+    <section className={styles.SimilarProducts} data-fs-content="product-details">
       <div className={styles.SimilarProducts__wrap} >
-        <ul className={styles.SimilarProducts__list} >
-
+        <p className={styles.SimilarProducts__title}>Color Swatch</p>
+        <ul className={styles.SimilarProducts__list} data-fs-product-details-info="true">
+          
           {similar.map((similar:any, i:number) => (
               <li className={styles.SimilarProducts__list__item} key={i}>
                 <Link 
                   href={`/${similar.link}/p`}
                   className={styles.SimilarProducts__list__item__link}
                 >
-                  <picture>
+                  <span
+                    className={styles.SimilarProducts__list__item__thumb}
+                    style={{ background: similar.color }}
+                    aria-label={similar.name}
+                  >
+                  </span>
+                  {/* <picture>
                     <source
                       srcSet={similar.img}
                       data-fs-image
@@ -46,7 +50,7 @@ export default function SimilarProducts() {
                       className={styles.SimilarProducts__list__item__image}
                     />
                   </picture>
-                  <p>{similar.productName}</p>
+                  <p>{similar.productName}</p> */}
                 </Link>
               </li>
             ))}

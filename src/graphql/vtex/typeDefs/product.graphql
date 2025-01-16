@@ -41,6 +41,7 @@ extend type StoreProduct {
   """
   availableInstallments: [Installments!]!
   properties: [Properties!]!
+  specificationGeneral: [Properties]
   categoryTree: categoryTreeType
   recommendations: recommendationsType
 }

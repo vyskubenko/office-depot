@@ -22,6 +22,13 @@ export const fragment = gql(`
           val
         }
       }
+      specificationGeneral {
+        name
+        originalName
+        values {
+            val
+        }
+      }
       recommendations {
         similars {
           productName

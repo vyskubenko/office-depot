@@ -32,6 +32,24 @@ const productResolver = {
            })
         }));
     },
+    specificationGeneral: (root: StoreProductRoot) => {
+
+      const specs = root.isVariantOf.specificationGroups.filter( (spec:any) => spec.name == 'General');
+
+      if (!specs.length) {
+        return [];
+      }
+
+      const specg = specs[0]
+
+      return specg.specifications.map((specs:any) => ({
+        name: specs.name,
+        originalName: specs.originalName,
+        values: specs.values.map((item:any) => {
+          return { val: item } 
+         })
+      }));
+    },
     categoryTree: (root: StoreProductRoot) => {
 
         const specs = root;

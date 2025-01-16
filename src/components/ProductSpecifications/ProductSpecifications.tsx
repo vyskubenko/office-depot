@@ -26,18 +26,8 @@ import { ProductSpecificationsList } from './ProductSpecificationsTypes'
 export default function ProductSpecifications(props: ProductSpecificationsList) {
 
   const context = usePDP()
-  const prodId = context?.data?.product?.id;
 
-  const specQuery = { data: { sku: prodId } };
-
-  const [getProductSpecs, { data, error }] = useLazyQuery(productSpecQuery,specQuery);
-  getProductSpecs(specQuery)
-
-  console.log(`specsProps`, data)
-
-  //-----
-
-  const properties = context?.data?.product?.properties;
+  const properties = context?.data?.product?.specificationGeneral;
 
   if (!properties || !properties.length) {
     return null;
