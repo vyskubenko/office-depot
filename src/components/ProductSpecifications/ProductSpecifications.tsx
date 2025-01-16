@@ -1,13 +1,11 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from 'react';
 import styles from './ProductSpecifications.module.scss'
 
-import { usePDP }  from "@faststore/core"
+import { usePDP }  from '@faststore/core'
 
-import { gql } from "@faststore/core/api";
+import { useLazyQuery_unstable as useLazyQuery } from '@faststore/core/experimental';
 
-import { useLazyQuery_unstable as useLazyQuery } from "@faststore/core/experimental";
-
-
+import { fragment as productSpecQuery } from './../../fragments/ProductSpecs'
 
 import { 
   Table,
@@ -23,31 +21,19 @@ import {
 
 import { ProductSpecificationsList } from './ProductSpecificationsTypes'
 
-export const query = gql(`
-query SubmitContactForm($data: ContactFormInput!) {
-  submitContactForm(input: $data) {
-    message
-  }
-}
-`);
 
 
 export default function ProductSpecifications(props: ProductSpecificationsList) {
 
   const context = usePDP()
+  const prodId = context?.data?.product?.id;
 
-  //----
+  const specQuery = { data: { sku: prodId } };
 
-  const [submitContactForm, { data, error }] = useLazyQuery(query, {
-    data: { sku: "" },
-  });
+  const [getProductSpecs, { data, error }] = useLazyQuery(productSpecQuery,specQuery);
+  getProductSpecs(specQuery)
 
-
-  console.log(`submitContactForm ---->`)
-
-  const optionsSPecs = submitContactForm({ data : { sku: "test" }})
-  console.log()
-
+  console.log(`specsProps`, data)
 
   //-----
 

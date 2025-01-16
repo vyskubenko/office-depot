@@ -25,6 +25,8 @@ type properValues {
 type similarsType {
   productName: String
   link: String
+  color: String
+  img: String
   properties: [Properties]
 }
 

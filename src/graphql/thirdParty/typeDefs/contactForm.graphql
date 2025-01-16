@@ -1,5 +1,5 @@
 type ContactFormResponse {
-  message: String
+  sku: String
 }
 
 input ContactFormInput {
@@ -7,5 +7,5 @@ input ContactFormInput {
 }
 
 type Query {
-  submitContactForm(input: ContactFormInput!): ContactFormResponse
+  getProductSpecs(input: ContactFormInput!): ContactFormResponse
 }

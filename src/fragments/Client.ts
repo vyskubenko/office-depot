@@ -26,6 +26,8 @@ export const fragment = gql(`
         similars {
           productName
           link
+          color
+          img
           properties {
             name
             originalName

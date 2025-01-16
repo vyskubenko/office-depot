@@ -1,7 +1,7 @@
-import contactFormResolver from "./contactForm";
+import productSpecsResolver from "./productSpecs";
 
 const resolvers = {
-  ...contactFormResolver,
+  ...productSpecsResolver,
 };
 
 export default resolvers;

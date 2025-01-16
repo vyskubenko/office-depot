@@ -8,6 +8,7 @@ import TabContent from './TabContent/TabContent'
 import ProductSpecifications from './ProductSpecifications/ProductSpecifications'
 import CustomBreadcrumb from './CustomBreadcrumb/CustomBreadcrumb'
 import ManufacturerNumber from './ManufacturerNumber/ManufacturerNumber'
+import SimilarProducts from './SimilarProducts/SimilarProducts'
 
 export default {
   CustomHeader,
@@ -18,5 +19,6 @@ export default {
   TabContent,
   ProductSpecifications,
   CustomBreadcrumb,
-  ManufacturerNumber
+  ManufacturerNumber,
+  SimilarProducts
 }
