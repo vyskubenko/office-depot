@@ -1,7 +1,11 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from 'react';
 import styles from './ProductSpecifications.module.scss'
 
-import { usePDP }  from "@faststore/core"
+import { usePDP }  from '@faststore/core'
+
+import { useLazyQuery_unstable as useLazyQuery } from '@faststore/core/experimental';
+
+import { fragment as productSpecQuery } from './../../fragments/ProductSpecs'
 
 import { 
   Table,
@@ -17,11 +21,13 @@ import {
 
 import { ProductSpecificationsList } from './ProductSpecificationsTypes'
 
+
+
 export default function ProductSpecifications(props: ProductSpecificationsList) {
 
   const context = usePDP()
 
-  const properties = context?.data?.product?.properties;
+  const properties = context?.data?.product?.specificationGeneral;
 
   if (!properties || !properties.length) {
     return null;

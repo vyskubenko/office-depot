@@ -1,0 +1,11 @@
+type ContactFormResponse {
+  sku: String
+}
+
+input ContactFormInput {
+  sku: String!
+}
+
+type Query {
+  getProductSpecs(input: ContactFormInput!): ContactFormResponse
+}

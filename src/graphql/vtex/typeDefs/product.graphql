@@ -22,6 +22,18 @@ type properValues {
   val: String
 }
 
+type similarsType {
+  productName: String
+  link: String
+  color: String
+  img: String
+  properties: [Properties]
+}
+
+type recommendationsType {
+  similars: [similarsType]
+}
+
 
 extend type StoreProduct {
   """
@@ -29,5 +41,7 @@ extend type StoreProduct {
   """
   availableInstallments: [Installments!]!
   properties: [Properties!]!
+  specificationGeneral: [Properties]
   categoryTree: categoryTreeType
+  recommendations: recommendationsType
 }

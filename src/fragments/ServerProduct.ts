@@ -22,6 +22,28 @@ export const fragment = gql(`
           val
         }
       }
+      specificationGeneral {
+        name
+        originalName
+        values {
+            val
+        }
+      }
+      recommendations {
+        similars {
+          productName
+          link
+          color
+          img
+          properties {
+            name
+            originalName
+            values {
+                val
+            }
+          }
+        }
+      }
     }
   }
 `);

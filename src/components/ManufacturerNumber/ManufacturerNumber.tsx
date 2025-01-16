@@ -16,6 +16,7 @@ export default function ManufacturerNumber() {
     return null
   }
   
+  
   return (
     <section className={styles.ManufacturerNumber} data-fs-content="ManufacturerNumber" >
       Manufacturer #{ManufacturerNumber}

@@ -482,5 +482,17 @@
       "properties": {
       }
     }
+  },
+  {
+    "name": "SimilarProducts",
+    "scopes": ["pdp, plp, search"],
+    "schema": {
+      "title": "[ODP] SimilarProducts",
+      "description": "SimilarProducts",
+      "type": "object",
+      "required": [],
+      "properties": {
+      }
+    }
   }
 ]
