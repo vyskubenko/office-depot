@@ -10,6 +10,13 @@ import CustomBreadcrumb from './CustomBreadcrumb/CustomBreadcrumb'
 import ManufacturerNumber from './ManufacturerNumber/ManufacturerNumber'
 import SimilarProducts from './SimilarProducts/SimilarProducts'
 
+
+import ProductDetailsWithCustomButton from "./sections/ProductDetailsWithCustomButton";
+
+const sections = {
+
+ProductDetails: ProductDetailsWithCustomButton
+};
 export default {
   CustomHeader,
   BannerGrid,
@@ -20,5 +27,6 @@ export default {
   ProductSpecifications,
   CustomBreadcrumb,
   ManufacturerNumber,
-  SimilarProducts
+  SimilarProducts,
+  sections
 }
